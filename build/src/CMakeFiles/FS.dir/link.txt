@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/FS.dir/tt.cpp.o  -o FS 

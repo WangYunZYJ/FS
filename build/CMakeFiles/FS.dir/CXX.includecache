@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/82334/Desktop/FS/src/tt.cpp
+tt.h
+/mnt/c/Users/82334/Desktop/FS/src/tt.h
+iostream
+-
+
+/mnt/c/Users/82334/Desktop/FS/src/tt.h
+

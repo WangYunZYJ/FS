@@ -1,0 +1,5 @@
+/mnt/c/Users/82334/Desktop/FS/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/82334/Desktop/FS/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/82334/Desktop/FS/build/src/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/82334/Desktop/FS/build/src/CMakeFiles/FS.dir
+/mnt/c/Users/82334/Desktop/FS/build/src/CMakeFiles/edit_cache.dir
