@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/IO/io.h
+
+../include/inode/inode.h
+
+/mnt/c/Users/82334/Desktop/FS/test/test.cpp
+inode/inode.h
+/mnt/c/Users/82334/Desktop/FS/test/inode/inode.h
+IO/io.h
+/mnt/c/Users/82334/Desktop/FS/test/IO/io.h
+

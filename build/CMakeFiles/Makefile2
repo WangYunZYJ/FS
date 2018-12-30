@@ -63,12 +63,14 @@ CMAKE_BINARY_DIR = /mnt/c/Users/82334/Desktop/FS/build
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
-src/all: src/CMakeFiles/FS.dir/all
+src/all: src/CMakeFiles/FS_lib_static.dir/all
+src/all: src/CMakeFiles/FS_lib_shared.dir/all
 
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
-src/clean: src/CMakeFiles/FS.dir/clean
+src/clean: src/CMakeFiles/FS_lib_static.dir/clean
+src/clean: src/CMakeFiles/FS_lib_shared.dir/clean
 
 .PHONY : src/clean
 
@@ -78,39 +80,131 @@ src/preinstall:
 .PHONY : src/preinstall
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/FS.dir
+# Target rules for target src/CMakeFiles/FS_lib_static.dir
 
 # All Build rule for target.
-src/CMakeFiles/FS.dir/all:
-	$(MAKE) -f src/CMakeFiles/FS.dir/build.make src/CMakeFiles/FS.dir/depend
-	$(MAKE) -f src/CMakeFiles/FS.dir/build.make src/CMakeFiles/FS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/82334/Desktop/FS/build/CMakeFiles --progress-num=1,2 "Built target FS"
-.PHONY : src/CMakeFiles/FS.dir/all
+src/CMakeFiles/FS_lib_static.dir/all:
+	$(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/depend
+	$(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/82334/Desktop/FS/build/CMakeFiles --progress-num=6,7,8 "Built target FS_lib_static"
+.PHONY : src/CMakeFiles/FS_lib_static.dir/all
 
 # Include target in all.
-all: src/CMakeFiles/FS.dir/all
+all: src/CMakeFiles/FS_lib_static.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/FS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/82334/Desktop/FS/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS.dir/all
+src/CMakeFiles/FS_lib_static.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/82334/Desktop/FS/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS_lib_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/82334/Desktop/FS/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/FS.dir/rule
+.PHONY : src/CMakeFiles/FS_lib_static.dir/rule
 
 # Convenience name for target.
-FS: src/CMakeFiles/FS.dir/rule
+FS_lib_static: src/CMakeFiles/FS_lib_static.dir/rule
+
+.PHONY : FS_lib_static
+
+# clean rule for target.
+src/CMakeFiles/FS_lib_static.dir/clean:
+	$(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/clean
+.PHONY : src/CMakeFiles/FS_lib_static.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/FS_lib_static.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/FS_lib_shared.dir
+
+# All Build rule for target.
+src/CMakeFiles/FS_lib_shared.dir/all:
+	$(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/depend
+	$(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/82334/Desktop/FS/build/CMakeFiles --progress-num=3,4,5 "Built target FS_lib_shared"
+.PHONY : src/CMakeFiles/FS_lib_shared.dir/all
+
+# Include target in all.
+all: src/CMakeFiles/FS_lib_shared.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/FS_lib_shared.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/82334/Desktop/FS/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS_lib_shared.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/82334/Desktop/FS/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/FS_lib_shared.dir/rule
+
+# Convenience name for target.
+FS_lib_shared: src/CMakeFiles/FS_lib_shared.dir/rule
+
+.PHONY : FS_lib_shared
+
+# clean rule for target.
+src/CMakeFiles/FS_lib_shared.dir/clean:
+	$(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/clean
+.PHONY : src/CMakeFiles/FS_lib_shared.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/FS_lib_shared.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory test
+
+# Convenience name for "all" pass in the directory.
+test/all: test/CMakeFiles/FS.dir/all
+
+.PHONY : test/all
+
+# Convenience name for "clean" pass in the directory.
+test/clean: test/CMakeFiles/FS.dir/clean
+
+.PHONY : test/clean
+
+# Convenience name for "preinstall" pass in the directory.
+test/preinstall:
+
+.PHONY : test/preinstall
+
+#=============================================================================
+# Target rules for target test/CMakeFiles/FS.dir
+
+# All Build rule for target.
+test/CMakeFiles/FS.dir/all:
+	$(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/depend
+	$(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/82334/Desktop/FS/build/CMakeFiles --progress-num=1,2 "Built target FS"
+.PHONY : test/CMakeFiles/FS.dir/all
+
+# Include target in all.
+all: test/CMakeFiles/FS.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+test/CMakeFiles/FS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/82334/Desktop/FS/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/FS.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/82334/Desktop/FS/build/CMakeFiles 0
+.PHONY : test/CMakeFiles/FS.dir/rule
+
+# Convenience name for target.
+FS: test/CMakeFiles/FS.dir/rule
 
 .PHONY : FS
 
 # clean rule for target.
-src/CMakeFiles/FS.dir/clean:
-	$(MAKE) -f src/CMakeFiles/FS.dir/build.make src/CMakeFiles/FS.dir/clean
-.PHONY : src/CMakeFiles/FS.dir/clean
+test/CMakeFiles/FS.dir/clean:
+	$(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/clean
+.PHONY : test/CMakeFiles/FS.dir/clean
 
 # clean rule for target.
-clean: src/CMakeFiles/FS.dir/clean
+clean: test/CMakeFiles/FS.dir/clean
 
 .PHONY : clean
 

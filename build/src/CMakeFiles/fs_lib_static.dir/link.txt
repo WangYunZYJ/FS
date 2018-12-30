@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhelloworld.a  CMakeFiles/fs_lib_static.dir/IO/io.cpp.o CMakeFiles/fs_lib_static.dir/inode/inode.cpp.o
+/usr/bin/ranlib libhelloworld.a

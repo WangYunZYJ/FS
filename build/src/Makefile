@@ -56,16 +56,39 @@ CMAKE_BINARY_DIR = /mnt/c/Users/82334/Desktop/FS/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,6 +100,29 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,46 +157,94 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/FS.dir/rule:
-	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS.dir/rule
-.PHONY : src/CMakeFiles/FS.dir/rule
+src/CMakeFiles/FS_lib_static.dir/rule:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS_lib_static.dir/rule
+.PHONY : src/CMakeFiles/FS_lib_static.dir/rule
 
 # Convenience name for target.
-FS: src/CMakeFiles/FS.dir/rule
+FS_lib_static: src/CMakeFiles/FS_lib_static.dir/rule
 
-.PHONY : FS
+.PHONY : FS_lib_static
 
 # fast build rule for target.
-FS/fast:
-	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS.dir/build.make src/CMakeFiles/FS.dir/build
-.PHONY : FS/fast
+FS_lib_static/fast:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/build
+.PHONY : FS_lib_static/fast
 
-tt.o: tt.cpp.o
+# Convenience name for target.
+src/CMakeFiles/FS_lib_shared.dir/rule:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS_lib_shared.dir/rule
+.PHONY : src/CMakeFiles/FS_lib_shared.dir/rule
 
-.PHONY : tt.o
+# Convenience name for target.
+FS_lib_shared: src/CMakeFiles/FS_lib_shared.dir/rule
+
+.PHONY : FS_lib_shared
+
+# fast build rule for target.
+FS_lib_shared/fast:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/build
+.PHONY : FS_lib_shared/fast
+
+IO/io.o: IO/io.cpp.o
+
+.PHONY : IO/io.o
 
 # target to build an object file
-tt.cpp.o:
-	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS.dir/build.make src/CMakeFiles/FS.dir/tt.cpp.o
-.PHONY : tt.cpp.o
+IO/io.cpp.o:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/IO/io.cpp.o
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/IO/io.cpp.o
+.PHONY : IO/io.cpp.o
 
-tt.i: tt.cpp.i
+IO/io.i: IO/io.cpp.i
 
-.PHONY : tt.i
+.PHONY : IO/io.i
 
 # target to preprocess a source file
-tt.cpp.i:
-	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS.dir/build.make src/CMakeFiles/FS.dir/tt.cpp.i
-.PHONY : tt.cpp.i
+IO/io.cpp.i:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/IO/io.cpp.i
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/IO/io.cpp.i
+.PHONY : IO/io.cpp.i
 
-tt.s: tt.cpp.s
+IO/io.s: IO/io.cpp.s
 
-.PHONY : tt.s
+.PHONY : IO/io.s
 
 # target to generate assembly for a file
-tt.cpp.s:
-	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS.dir/build.make src/CMakeFiles/FS.dir/tt.cpp.s
-.PHONY : tt.cpp.s
+IO/io.cpp.s:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/IO/io.cpp.s
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/IO/io.cpp.s
+.PHONY : IO/io.cpp.s
+
+inode/inode.o: inode/inode.cpp.o
+
+.PHONY : inode/inode.o
+
+# target to build an object file
+inode/inode.cpp.o:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o
+.PHONY : inode/inode.cpp.o
+
+inode/inode.i: inode/inode.cpp.i
+
+.PHONY : inode/inode.i
+
+# target to preprocess a source file
+inode/inode.cpp.i:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.i
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.i
+.PHONY : inode/inode.cpp.i
+
+inode/inode.s: inode/inode.cpp.s
+
+.PHONY : inode/inode.s
+
+# target to generate assembly for a file
+inode/inode.cpp.s:
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.s
+	cd /mnt/c/Users/82334/Desktop/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.s
+.PHONY : inode/inode.cpp.s
 
 # Help Target
 help:
@@ -158,12 +252,20 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... FS"
+	@echo "... install/local"
+	@echo "... FS_lib_static"
+	@echo "... install/strip"
+	@echo "... FS_lib_shared"
+	@echo "... list_install_components"
 	@echo "... edit_cache"
-	@echo "... tt.o"
-	@echo "... tt.i"
-	@echo "... tt.s"
+	@echo "... rebuild_cache"
+	@echo "... install"
+	@echo "... IO/io.o"
+	@echo "... IO/io.i"
+	@echo "... IO/io.s"
+	@echo "... inode/inode.o"
+	@echo "... inode/inode.i"
+	@echo "... inode/inode.s"
 .PHONY : help
 
 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/FS.dir/test.cpp.o  -o ../bin/FS  -L/mnt/c/Users/82334/Desktop/FS/build/lib -Wl,-rpath,/mnt/c/Users/82334/Desktop/FS/build/lib -lwyfs 
