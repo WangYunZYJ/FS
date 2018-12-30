@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/Users/82334/Desktop/FS
+# Install script for directory: /home/wy/FS
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/82334/Desktop/FS/install")
+  set(CMAKE_INSTALL_PREFIX "/home/wy/FS/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,15 +32,10 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/c/Users/82334/Desktop/FS/build/src/cmake_install.cmake")
-  include("/mnt/c/Users/82334/Desktop/FS/build/test/cmake_install.cmake")
+  include("/home/wy/FS/build/src/cmake_install.cmake")
+  include("/home/wy/FS/build/test/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/82334/Desktop/FS/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wy/FS/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

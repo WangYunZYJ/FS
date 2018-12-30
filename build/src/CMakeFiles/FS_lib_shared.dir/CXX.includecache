@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-../include/IO/io.h
-
 ../include/inode/inode.h
 
-/mnt/c/Users/82334/Desktop/FS/src/IO/io.cpp
-IO/io.h
-/mnt/c/Users/82334/Desktop/FS/src/IO/IO/io.h
+../include/io/io.h
+
+/home/wy/FS/src/inode/inode.cpp
+inode/inode.h
+/home/wy/FS/src/inode/inode/inode.h
 iostream
 -
 
-/mnt/c/Users/82334/Desktop/FS/src/inode/inode.cpp
-inode/inode.h
-/mnt/c/Users/82334/Desktop/FS/src/inode/inode/inode.h
+/home/wy/FS/src/io/io.cpp
 iostream
 -
+io/io.h
+/home/wy/FS/src/io/io/io.h
 

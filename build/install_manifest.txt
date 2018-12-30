@@ -1,6 +1,6 @@
-/mnt/c/Users/82334/Desktop/FS/install/lib/libwyfs.so.1.2
-/mnt/c/Users/82334/Desktop/FS/install/lib/libwyfs.so.1
-/mnt/c/Users/82334/Desktop/FS/install/lib/libwyfs.so
-/mnt/c/Users/82334/Desktop/FS/install/lib/libwyfs.a
-/mnt/c/Users/82334/Desktop/FS/install/include/inode/inode.h
-/mnt/c/Users/82334/Desktop/FS/install/include/IO/io.h
+/home/wy/FS/install/lib/libwyfs.so.1.2
+/home/wy/FS/install/lib/libwyfs.so.1
+/home/wy/FS/install/lib/libwyfs.so
+/home/wy/FS/install/lib/libwyfs.a
+/home/wy/FS/install/include/io/io.h
+/home/wy/FS/install/include/inode/inode.h

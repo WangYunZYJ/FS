@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="FS"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/wy/FS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/wy/FS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/wy/FS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/wy/FS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/wy/FS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/wy/FS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/wy/FS/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FS_lib_shared">
+				<Option output="/home/wy/FS/build/lib/libwyfs.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wy/FS/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wy/FS"/>
+					<Add directory="/home/wy/FS/.git"/>
+					<Add directory="/home/wy/FS/.git/branches"/>
+					<Add directory="/home/wy/FS/.git/hooks"/>
+					<Add directory="/home/wy/FS/.git/info"/>
+					<Add directory="/home/wy/FS/.git/logs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/objects"/>
+					<Add directory="/home/wy/FS/.git/objects/4e"/>
+					<Add directory="/home/wy/FS/.git/objects/cc"/>
+					<Add directory="/home/wy/FS/.git/objects/info"/>
+					<Add directory="/home/wy/FS/.git/objects/pack"/>
+					<Add directory="/home/wy/FS/.git/refs"/>
+					<Add directory="/home/wy/FS/.git/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/refs/tags"/>
+					<Add directory="/home/wy/FS/.idea"/>
+					<Add directory="/home/wy/FS/.idea/codeStyles"/>
+					<Add directory="/home/wy/FS/build"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdC"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/build/bin"/>
+					<Add directory="/home/wy/FS/build/lib"/>
+					<Add directory="/home/wy/FS/build/src"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/build/test"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/include"/>
+					<Add directory="/home/wy/FS/include/inode"/>
+					<Add directory="/home/wy/FS/include/io"/>
+					<Add directory="/home/wy/FS/install"/>
+					<Add directory="/home/wy/FS/install/include"/>
+					<Add directory="/home/wy/FS/install/include/inode"/>
+					<Add directory="/home/wy/FS/install/include/io"/>
+					<Add directory="/home/wy/FS/install/lib"/>
+					<Add directory="/home/wy/FS/src"/>
+					<Add directory="/home/wy/FS/src/inode"/>
+					<Add directory="/home/wy/FS/src/io"/>
+					<Add directory="/home/wy/FS/src/volume"/>
+					<Add directory="/home/wy/FS/test"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 FS_lib_shared"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FS_lib_shared/fast">
+				<Option output="/home/wy/FS/build/lib/libwyfs.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wy/FS/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wy/FS"/>
+					<Add directory="/home/wy/FS/.git"/>
+					<Add directory="/home/wy/FS/.git/branches"/>
+					<Add directory="/home/wy/FS/.git/hooks"/>
+					<Add directory="/home/wy/FS/.git/info"/>
+					<Add directory="/home/wy/FS/.git/logs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/objects"/>
+					<Add directory="/home/wy/FS/.git/objects/4e"/>
+					<Add directory="/home/wy/FS/.git/objects/cc"/>
+					<Add directory="/home/wy/FS/.git/objects/info"/>
+					<Add directory="/home/wy/FS/.git/objects/pack"/>
+					<Add directory="/home/wy/FS/.git/refs"/>
+					<Add directory="/home/wy/FS/.git/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/refs/tags"/>
+					<Add directory="/home/wy/FS/.idea"/>
+					<Add directory="/home/wy/FS/.idea/codeStyles"/>
+					<Add directory="/home/wy/FS/build"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdC"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/build/bin"/>
+					<Add directory="/home/wy/FS/build/lib"/>
+					<Add directory="/home/wy/FS/build/src"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/build/test"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/include"/>
+					<Add directory="/home/wy/FS/include/inode"/>
+					<Add directory="/home/wy/FS/include/io"/>
+					<Add directory="/home/wy/FS/install"/>
+					<Add directory="/home/wy/FS/install/include"/>
+					<Add directory="/home/wy/FS/install/include/inode"/>
+					<Add directory="/home/wy/FS/install/include/io"/>
+					<Add directory="/home/wy/FS/install/lib"/>
+					<Add directory="/home/wy/FS/src"/>
+					<Add directory="/home/wy/FS/src/inode"/>
+					<Add directory="/home/wy/FS/src/io"/>
+					<Add directory="/home/wy/FS/src/volume"/>
+					<Add directory="/home/wy/FS/test"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 FS_lib_shared/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FS_lib_static">
+				<Option output="/home/wy/FS/build/lib/libwyfs.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wy/FS/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wy/FS"/>
+					<Add directory="/home/wy/FS/.git"/>
+					<Add directory="/home/wy/FS/.git/branches"/>
+					<Add directory="/home/wy/FS/.git/hooks"/>
+					<Add directory="/home/wy/FS/.git/info"/>
+					<Add directory="/home/wy/FS/.git/logs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/objects"/>
+					<Add directory="/home/wy/FS/.git/objects/4e"/>
+					<Add directory="/home/wy/FS/.git/objects/cc"/>
+					<Add directory="/home/wy/FS/.git/objects/info"/>
+					<Add directory="/home/wy/FS/.git/objects/pack"/>
+					<Add directory="/home/wy/FS/.git/refs"/>
+					<Add directory="/home/wy/FS/.git/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/refs/tags"/>
+					<Add directory="/home/wy/FS/.idea"/>
+					<Add directory="/home/wy/FS/.idea/codeStyles"/>
+					<Add directory="/home/wy/FS/build"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdC"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/build/bin"/>
+					<Add directory="/home/wy/FS/build/lib"/>
+					<Add directory="/home/wy/FS/build/src"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/build/test"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/include"/>
+					<Add directory="/home/wy/FS/include/inode"/>
+					<Add directory="/home/wy/FS/include/io"/>
+					<Add directory="/home/wy/FS/install"/>
+					<Add directory="/home/wy/FS/install/include"/>
+					<Add directory="/home/wy/FS/install/include/inode"/>
+					<Add directory="/home/wy/FS/install/include/io"/>
+					<Add directory="/home/wy/FS/install/lib"/>
+					<Add directory="/home/wy/FS/src"/>
+					<Add directory="/home/wy/FS/src/inode"/>
+					<Add directory="/home/wy/FS/src/io"/>
+					<Add directory="/home/wy/FS/src/volume"/>
+					<Add directory="/home/wy/FS/test"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 FS_lib_static"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FS_lib_static/fast">
+				<Option output="/home/wy/FS/build/lib/libwyfs.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wy/FS/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wy/FS"/>
+					<Add directory="/home/wy/FS/.git"/>
+					<Add directory="/home/wy/FS/.git/branches"/>
+					<Add directory="/home/wy/FS/.git/hooks"/>
+					<Add directory="/home/wy/FS/.git/info"/>
+					<Add directory="/home/wy/FS/.git/logs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/objects"/>
+					<Add directory="/home/wy/FS/.git/objects/4e"/>
+					<Add directory="/home/wy/FS/.git/objects/cc"/>
+					<Add directory="/home/wy/FS/.git/objects/info"/>
+					<Add directory="/home/wy/FS/.git/objects/pack"/>
+					<Add directory="/home/wy/FS/.git/refs"/>
+					<Add directory="/home/wy/FS/.git/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/refs/tags"/>
+					<Add directory="/home/wy/FS/.idea"/>
+					<Add directory="/home/wy/FS/.idea/codeStyles"/>
+					<Add directory="/home/wy/FS/build"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdC"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/build/bin"/>
+					<Add directory="/home/wy/FS/build/lib"/>
+					<Add directory="/home/wy/FS/build/src"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/build/test"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/include"/>
+					<Add directory="/home/wy/FS/include/inode"/>
+					<Add directory="/home/wy/FS/include/io"/>
+					<Add directory="/home/wy/FS/install"/>
+					<Add directory="/home/wy/FS/install/include"/>
+					<Add directory="/home/wy/FS/install/include/inode"/>
+					<Add directory="/home/wy/FS/install/include/io"/>
+					<Add directory="/home/wy/FS/install/lib"/>
+					<Add directory="/home/wy/FS/src"/>
+					<Add directory="/home/wy/FS/src/inode"/>
+					<Add directory="/home/wy/FS/src/io"/>
+					<Add directory="/home/wy/FS/src/volume"/>
+					<Add directory="/home/wy/FS/test"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 FS_lib_static/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FS">
+				<Option output="/home/wy/FS/build/bin/FS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wy/FS/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wy/FS"/>
+					<Add directory="/home/wy/FS/.git"/>
+					<Add directory="/home/wy/FS/.git/branches"/>
+					<Add directory="/home/wy/FS/.git/hooks"/>
+					<Add directory="/home/wy/FS/.git/info"/>
+					<Add directory="/home/wy/FS/.git/logs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/objects"/>
+					<Add directory="/home/wy/FS/.git/objects/4e"/>
+					<Add directory="/home/wy/FS/.git/objects/cc"/>
+					<Add directory="/home/wy/FS/.git/objects/info"/>
+					<Add directory="/home/wy/FS/.git/objects/pack"/>
+					<Add directory="/home/wy/FS/.git/refs"/>
+					<Add directory="/home/wy/FS/.git/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/refs/tags"/>
+					<Add directory="/home/wy/FS/.idea"/>
+					<Add directory="/home/wy/FS/.idea/codeStyles"/>
+					<Add directory="/home/wy/FS/build"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdC"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/build/bin"/>
+					<Add directory="/home/wy/FS/build/lib"/>
+					<Add directory="/home/wy/FS/build/src"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/build/test"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/include"/>
+					<Add directory="/home/wy/FS/include/inode"/>
+					<Add directory="/home/wy/FS/include/io"/>
+					<Add directory="/home/wy/FS/install"/>
+					<Add directory="/home/wy/FS/install/include"/>
+					<Add directory="/home/wy/FS/install/include/inode"/>
+					<Add directory="/home/wy/FS/install/include/io"/>
+					<Add directory="/home/wy/FS/install/lib"/>
+					<Add directory="/home/wy/FS/src"/>
+					<Add directory="/home/wy/FS/src/inode"/>
+					<Add directory="/home/wy/FS/src/io"/>
+					<Add directory="/home/wy/FS/src/volume"/>
+					<Add directory="/home/wy/FS/test"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 FS"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FS/fast">
+				<Option output="/home/wy/FS/build/bin/FS" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wy/FS/build/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wy/FS"/>
+					<Add directory="/home/wy/FS/.git"/>
+					<Add directory="/home/wy/FS/.git/branches"/>
+					<Add directory="/home/wy/FS/.git/hooks"/>
+					<Add directory="/home/wy/FS/.git/info"/>
+					<Add directory="/home/wy/FS/.git/logs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/logs/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/objects"/>
+					<Add directory="/home/wy/FS/.git/objects/4e"/>
+					<Add directory="/home/wy/FS/.git/objects/cc"/>
+					<Add directory="/home/wy/FS/.git/objects/info"/>
+					<Add directory="/home/wy/FS/.git/objects/pack"/>
+					<Add directory="/home/wy/FS/.git/refs"/>
+					<Add directory="/home/wy/FS/.git/refs/heads"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes"/>
+					<Add directory="/home/wy/FS/.git/refs/remotes/origin"/>
+					<Add directory="/home/wy/FS/.git/refs/tags"/>
+					<Add directory="/home/wy/FS/.idea"/>
+					<Add directory="/home/wy/FS/.idea/codeStyles"/>
+					<Add directory="/home/wy/FS/build"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdC"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/3.5.1/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/build/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/build/bin"/>
+					<Add directory="/home/wy/FS/build/lib"/>
+					<Add directory="/home/wy/FS/build/src"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/build/test"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/build/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdC/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/3.12.2/CompilerIdCXX/tmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/CMakeFiles/CMakeTmp"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/IO"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/inode"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/io"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles"/>
+					<Add directory="/home/wy/FS/cmake-build-debug/test/CMakeFiles/FS.dir"/>
+					<Add directory="/home/wy/FS/include"/>
+					<Add directory="/home/wy/FS/include/inode"/>
+					<Add directory="/home/wy/FS/include/io"/>
+					<Add directory="/home/wy/FS/install"/>
+					<Add directory="/home/wy/FS/install/include"/>
+					<Add directory="/home/wy/FS/install/include/inode"/>
+					<Add directory="/home/wy/FS/install/include/io"/>
+					<Add directory="/home/wy/FS/install/lib"/>
+					<Add directory="/home/wy/FS/src"/>
+					<Add directory="/home/wy/FS/src/inode"/>
+					<Add directory="/home/wy/FS/src/io"/>
+					<Add directory="/home/wy/FS/src/volume"/>
+					<Add directory="/home/wy/FS/test"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 FS/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/wy/FS/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/wy/FS/include/io/io.h">
+			<Option target="FS"/>
+		</Unit>
+		<Unit filename="/home/wy/FS/src/inode/inode.cpp">
+			<Option target="FS_lib_shared"/>
+			<Option target="FS_lib_static"/>
+		</Unit>
+		<Unit filename="/home/wy/FS/src/io/io.cpp">
+			<Option target="FS_lib_shared"/>
+			<Option target="FS_lib_static"/>
+		</Unit>
+		<Unit filename="/home/wy/FS/src/volume/volume.cpp">
+			<Option target="FS_lib_shared"/>
+			<Option target="FS_lib_static"/>
+		</Unit>
+		<Unit filename="/home/wy/FS/test/test.cpp">
+			<Option target="FS"/>
+		</Unit>
+		<Unit filename="/home/wy/FS/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wy/FS/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/wy/FS/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
