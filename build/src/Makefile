@@ -244,6 +244,66 @@ io/io.cpp.s:
 	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/io/io.cpp.s
 .PHONY : io/io.cpp.s
 
+volume/free_stack.o: volume/free_stack.cpp.o
+
+.PHONY : volume/free_stack.o
+
+# target to build an object file
+volume/free_stack.cpp.o:
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.o
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o
+.PHONY : volume/free_stack.cpp.o
+
+volume/free_stack.i: volume/free_stack.cpp.i
+
+.PHONY : volume/free_stack.i
+
+# target to preprocess a source file
+volume/free_stack.cpp.i:
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.i
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i
+.PHONY : volume/free_stack.cpp.i
+
+volume/free_stack.s: volume/free_stack.cpp.s
+
+.PHONY : volume/free_stack.s
+
+# target to generate assembly for a file
+volume/free_stack.cpp.s:
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.s
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s
+.PHONY : volume/free_stack.cpp.s
+
+volume/volume.o: volume/volume.cpp.o
+
+.PHONY : volume/volume.o
+
+# target to build an object file
+volume/volume.cpp.o:
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.o
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o
+.PHONY : volume/volume.cpp.o
+
+volume/volume.i: volume/volume.cpp.i
+
+.PHONY : volume/volume.i
+
+# target to preprocess a source file
+volume/volume.cpp.i:
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.i
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.i
+.PHONY : volume/volume.cpp.i
+
+volume/volume.s: volume/volume.cpp.s
+
+.PHONY : volume/volume.s
+
+# target to generate assembly for a file
+volume/volume.cpp.s:
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.s
+	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.s
+.PHONY : volume/volume.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -264,6 +324,12 @@ help:
 	@echo "... io/io.o"
 	@echo "... io/io.i"
 	@echo "... io/io.s"
+	@echo "... volume/free_stack.o"
+	@echo "... volume/free_stack.i"
+	@echo "... volume/free_stack.s"
+	@echo "... volume/volume.o"
+	@echo "... volume/volume.i"
+	@echo "... volume/volume.s"
 .PHONY : help
 
 

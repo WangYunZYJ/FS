@@ -1,1 +1,1 @@
-/usr/bin/g++ -fPIC -g  -shared -Wl,-soname,libwyfs.so.1 -o ../../build/lib/libwyfs.so.1.2 CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o CMakeFiles/FS_lib_shared.dir/io/io.cpp.o CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.o  -L/home/wy/FS/build/lib 
+/usr/bin/g++ -fPIC -g  -shared -Wl,-soname,libwyfs.so.1 -o ../../build/lib/libwyfs.so.1.2 CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o CMakeFiles/FS_lib_shared.dir/io/io.cpp.o CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.o CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.o  -L/home/wy/FS/build/lib 

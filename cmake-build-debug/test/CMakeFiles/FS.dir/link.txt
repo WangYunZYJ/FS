@@ -1,1 +1,1 @@
-/usr/bin/g++  -g  -rdynamic CMakeFiles/FS.dir/test.cpp.o  -o ../../build/bin/FS  -L/home/wy/FS/build/lib -Wl,-rpath,/home/wy/FS/build/lib -lwyfs 
+/usr/bin/g++  -g  -rdynamic CMakeFiles/FS.dir/test.cpp.o CMakeFiles/FS.dir/volume/free_stack_test.cpp.o  -o ../../build/bin/FS  -L/home/wy/FS/build/lib -Wl,-rpath,/home/wy/FS/build/lib -lwyfs 

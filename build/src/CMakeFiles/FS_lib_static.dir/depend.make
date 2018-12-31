@@ -7,3 +7,14 @@ src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o: ../src/inode/inode.cpp
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o: ../include/io/io.h
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o: ../src/io/io.cpp
 
+src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o: ../include/constants/constant.h
+src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o: ../include/volume/block.h
+src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o: ../include/volume/free_stack.h
+src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o: ../src/volume/free_stack.cpp
+
+src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: ../include/constants/constant.h
+src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: ../include/inode/inode.h
+src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: ../include/volume/block.h
+src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: ../include/volume/volume.h
+src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: ../src/volume/volume.cpp
+

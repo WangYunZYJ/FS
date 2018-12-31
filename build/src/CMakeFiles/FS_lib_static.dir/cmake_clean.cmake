@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FS_lib_static.dir/io/io.cpp.o"
+  "CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o"
+  "CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o"
   "CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o"
   "../lib/libwyfs.pdb"
   "../lib/libwyfs.a"

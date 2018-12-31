@@ -83,9 +83,22 @@ src/CMakeFiles/FS_lib_static.dir/io/io.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_static.dir/io/io.cpp.s"
 	cd /home/wy/FS/cmake-build-debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/src/io/io.cpp -o CMakeFiles/FS_lib_static.dir/io/io.cpp.s
 
+src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o: src/CMakeFiles/FS_lib_static.dir/flags.make
+src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o: ../src/volume/free_stack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o"
+	cd /home/wy/FS/cmake-build-debug/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o -c /home/wy/FS/src/volume/free_stack.cpp
+
+src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i"
+	cd /home/wy/FS/cmake-build-debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/FS/src/volume/free_stack.cpp > CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i
+
+src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s"
+	cd /home/wy/FS/cmake-build-debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/src/volume/free_stack.cpp -o CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s
+
 src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: src/CMakeFiles/FS_lib_static.dir/flags.make
 src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: ../src/volume/volume.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o"
 	cd /home/wy/FS/cmake-build-debug/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o -c /home/wy/FS/src/volume/volume.cpp
 
 src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.i: cmake_force
@@ -100,6 +113,7 @@ src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.s: cmake_force
 FS_lib_static_OBJECTS = \
 "CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o" \
 "CMakeFiles/FS_lib_static.dir/io/io.cpp.o" \
+"CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o" \
 "CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o"
 
 # External object files for target FS_lib_static
@@ -107,10 +121,11 @@ FS_lib_static_EXTERNAL_OBJECTS =
 
 ../build/lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o
 ../build/lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o
+../build/lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o
 ../build/lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o
 ../build/lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/build.make
 ../build/lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library ../../build/lib/libwyfs.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library ../../build/lib/libwyfs.a"
 	cd /home/wy/FS/cmake-build-debug/src && $(CMAKE_COMMAND) -P CMakeFiles/FS_lib_static.dir/cmake_clean_target.cmake
 	cd /home/wy/FS/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FS_lib_static.dir/link.txt --verbose=$(VERBOSE)
 

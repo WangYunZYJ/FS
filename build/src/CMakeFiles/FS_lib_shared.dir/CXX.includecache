@@ -6,9 +6,39 @@
 
 #IncludeRegexTransform: 
 
+../include/constants/constant.h
+tiff.h
+-
+cstddef
+-
+
 ../include/inode/inode.h
 
 ../include/io/io.h
+
+../include/volume/block.h
+
+../include/volume/free_stack.h
+stack
+-
+memory
+-
+block.h
+../include/volume/block.h
+vector
+-
+
+../include/volume/volume.h
+stack
+-
+inode.h
+-
+memory
+-
+block.h
+../include/volume/block.h
+constant.h
+../include/volume/constant.h
 
 /home/wy/FS/src/inode/inode.cpp
 inode/inode.h
@@ -21,4 +51,18 @@ iostream
 -
 io/io.h
 /home/wy/FS/src/io/io/io.h
+
+/home/wy/FS/src/volume/free_stack.cpp
+free_stack.h
+/home/wy/FS/src/volume/free_stack.h
+constant.h
+/home/wy/FS/src/volume/constant.h
+assert.h
+-
+iostream
+-
+
+/home/wy/FS/src/volume/volume.cpp
+volume/volume.h
+/home/wy/FS/src/volume/volume/volume.h
 

@@ -246,6 +246,36 @@ io/io.cpp.s:
 	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/io/io.cpp.s
 .PHONY : io/io.cpp.s
 
+volume/free_stack.o: volume/free_stack.cpp.o
+
+.PHONY : volume/free_stack.o
+
+# target to build an object file
+volume/free_stack.cpp.o:
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.o
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o
+.PHONY : volume/free_stack.cpp.o
+
+volume/free_stack.i: volume/free_stack.cpp.i
+
+.PHONY : volume/free_stack.i
+
+# target to preprocess a source file
+volume/free_stack.cpp.i:
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.i
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i
+.PHONY : volume/free_stack.cpp.i
+
+volume/free_stack.s: volume/free_stack.cpp.s
+
+.PHONY : volume/free_stack.s
+
+# target to generate assembly for a file
+volume/free_stack.cpp.s:
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.s
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s
+.PHONY : volume/free_stack.cpp.s
+
 volume/volume.o: volume/volume.cpp.o
 
 .PHONY : volume/volume.o
@@ -296,6 +326,9 @@ help:
 	@echo "... io/io.o"
 	@echo "... io/io.i"
 	@echo "... io/io.s"
+	@echo "... volume/free_stack.o"
+	@echo "... volume/free_stack.i"
+	@echo "... volume/free_stack.s"
 	@echo "... volume/volume.o"
 	@echo "... volume/volume.i"
 	@echo "... volume/volume.s"

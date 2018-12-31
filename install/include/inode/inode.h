@@ -1,5 +1,5 @@
-#ifndef INODE_H
-#define INODE_H
+#ifndef FS_INODE_H
+#define FS_INODE_H
 
 namespace wyfs
 {

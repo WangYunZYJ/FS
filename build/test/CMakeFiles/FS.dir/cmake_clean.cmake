@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FS.dir/test.cpp.o"
+  "CMakeFiles/FS.dir/volume/free_stack_test.cpp.o"
   "../bin/FS.pdb"
   "../bin/FS"
 )

@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o"
   "CMakeFiles/FS_lib_shared.dir/io/io.cpp.o"
+  "CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.o"
   "CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.o"
   "../../build/lib/libwyfs.pdb"
   "../../build/lib/libwyfs.so.1.2"

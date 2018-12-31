@@ -1,2 +1,2 @@
-/usr/bin/ar qc ../lib/libwyfs.a  CMakeFiles/FS_lib_static.dir/io/io.cpp.o CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o
+/usr/bin/ar qc ../lib/libwyfs.a  CMakeFiles/FS_lib_static.dir/io/io.cpp.o CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o
 /usr/bin/ranlib ../lib/libwyfs.a

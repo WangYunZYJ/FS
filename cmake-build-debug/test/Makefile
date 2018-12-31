@@ -198,6 +198,33 @@ test.cpp.s:
 	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/test.cpp.s
 .PHONY : test.cpp.s
 
+volume/free_stack_test.o: volume/free_stack_test.cpp.o
+
+.PHONY : volume/free_stack_test.o
+
+# target to build an object file
+volume/free_stack_test.cpp.o:
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o
+.PHONY : volume/free_stack_test.cpp.o
+
+volume/free_stack_test.i: volume/free_stack_test.cpp.i
+
+.PHONY : volume/free_stack_test.i
+
+# target to preprocess a source file
+volume/free_stack_test.cpp.i:
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.i
+.PHONY : volume/free_stack_test.cpp.i
+
+volume/free_stack_test.s: volume/free_stack_test.cpp.s
+
+.PHONY : volume/free_stack_test.s
+
+# target to generate assembly for a file
+volume/free_stack_test.cpp.s:
+	cd /home/wy/FS/cmake-build-debug && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.s
+.PHONY : volume/free_stack_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -214,6 +241,9 @@ help:
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
+	@echo "... volume/free_stack_test.o"
+	@echo "... volume/free_stack_test.i"
+	@echo "... volume/free_stack_test.s"
 .PHONY : help
 
 
