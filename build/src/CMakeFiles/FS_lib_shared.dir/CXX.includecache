@@ -11,10 +11,16 @@ tiff.h
 -
 cstddef
 -
+string
+-
 
 ../include/inode/inode.h
 
 ../include/io/io.h
+memory
+-
+fstream
+-
 
 ../include/volume/block.h
 
@@ -51,6 +57,12 @@ iostream
 -
 io/io.h
 /home/wy/FS/src/io/io/io.h
+constant.h
+/home/wy/FS/src/io/constant.h
+assert.h
+-
+cstring
+-
 
 /home/wy/FS/src/volume/free_stack.cpp
 free_stack.h

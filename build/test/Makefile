@@ -169,6 +169,33 @@ FS/fast:
 	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/build
 .PHONY : FS/fast
 
+io/io_test.o: io/io_test.cpp.o
+
+.PHONY : io/io_test.o
+
+# target to build an object file
+io/io_test.cpp.o:
+	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/io/io_test.cpp.o
+.PHONY : io/io_test.cpp.o
+
+io/io_test.i: io/io_test.cpp.i
+
+.PHONY : io/io_test.i
+
+# target to preprocess a source file
+io/io_test.cpp.i:
+	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/io/io_test.cpp.i
+.PHONY : io/io_test.cpp.i
+
+io/io_test.s: io/io_test.cpp.s
+
+.PHONY : io/io_test.s
+
+# target to generate assembly for a file
+io/io_test.cpp.s:
+	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/io/io_test.cpp.s
+.PHONY : io/io_test.cpp.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -236,6 +263,9 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
+	@echo "... io/io_test.o"
+	@echo "... io/io_test.i"
+	@echo "... io/io_test.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

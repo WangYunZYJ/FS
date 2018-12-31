@@ -3,6 +3,7 @@
 /home/wy/FS/install/lib/libwyfs.so
 /home/wy/FS/install/lib/libwyfs.a
 /home/wy/FS/install/include/io/io.h
+/home/wy/FS/install/include/catch/catch.h
 /home/wy/FS/install/include/volume/volume.h
 /home/wy/FS/install/include/volume/block.h
 /home/wy/FS/install/include/volume/free_stack.h

@@ -7,6 +7,7 @@
 
 #include <tiff.h>
 #include <cstddef>
+#include <string>
 
 namespace wyfs
 {
@@ -14,6 +15,7 @@ namespace wyfs
     const int16 BLOCK_SIZE = 512;
     const size_t MAX_STACK_FREE_SIZE = 100;
     const unsigned int BLOCK_AMOUNT = 1 << 16;
+    const std::string DISK_PATH = "/home/wy/FS/disk";
 }
 
 

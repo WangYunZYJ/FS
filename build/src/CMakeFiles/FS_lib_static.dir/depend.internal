@@ -5,6 +5,7 @@ src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o
  ../include/inode/inode.h
  /home/wy/FS/src/inode/inode.cpp
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o
+ ../include/constants/constant.h
  ../include/io/io.h
  /home/wy/FS/src/io/io.cpp
 src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o
