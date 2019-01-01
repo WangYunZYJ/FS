@@ -48,10 +48,10 @@ RM = /home/wy/下载/clion-2018.2.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wy/FS
+CMAKE_SOURCE_DIR = /home/wy/CLionProjects/FS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wy/FS/cmake-build-debug
+CMAKE_BINARY_DIR = /home/wy/CLionProjects/FS/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wy/FS/cmake-build-debug/CMakeFiles /home/wy/FS/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles /home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wy/FS/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

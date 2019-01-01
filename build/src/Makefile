@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wy/FS
+CMAKE_SOURCE_DIR = /home/wy/CLionProjects/FS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wy/FS/build
+CMAKE_BINARY_DIR = /home/wy/CLionProjects/FS/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wy/FS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wy/FS/build/CMakeFiles /home/wy/FS/build/src/CMakeFiles/progress.marks
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wy/FS/build/CMakeFiles 0
+	cd /home/wy/CLionProjects/FS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wy/CLionProjects/FS/build/CMakeFiles /home/wy/CLionProjects/FS/build/src/CMakeFiles/progress.marks
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wy/CLionProjects/FS/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wy/FS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wy/CLionProjects/FS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/FS_lib_shared.dir/rule:
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS_lib_shared.dir/rule
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS_lib_shared.dir/rule
 .PHONY : src/CMakeFiles/FS_lib_shared.dir/rule
 
 # Convenience name for target.
@@ -166,12 +166,12 @@ FS_lib_shared: src/CMakeFiles/FS_lib_shared.dir/rule
 
 # fast build rule for target.
 FS_lib_shared/fast:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/build
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/build
 .PHONY : FS_lib_shared/fast
 
 # Convenience name for target.
 src/CMakeFiles/FS_lib_static.dir/rule:
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS_lib_static.dir/rule
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FS_lib_static.dir/rule
 .PHONY : src/CMakeFiles/FS_lib_static.dir/rule
 
 # Convenience name for target.
@@ -181,8 +181,68 @@ FS_lib_static: src/CMakeFiles/FS_lib_static.dir/rule
 
 # fast build rule for target.
 FS_lib_static/fast:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/build
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/build
 .PHONY : FS_lib_static/fast
+
+disk_op/disk_init.o: disk_op/disk_init.cpp.o
+
+.PHONY : disk_op/disk_init.o
+
+# target to build an object file
+disk_op/disk_init.cpp.o:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o
+.PHONY : disk_op/disk_init.cpp.o
+
+disk_op/disk_init.i: disk_op/disk_init.cpp.i
+
+.PHONY : disk_op/disk_init.i
+
+# target to preprocess a source file
+disk_op/disk_init.cpp.i:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.i
+.PHONY : disk_op/disk_init.cpp.i
+
+disk_op/disk_init.s: disk_op/disk_init.cpp.s
+
+.PHONY : disk_op/disk_init.s
+
+# target to generate assembly for a file
+disk_op/disk_init.cpp.s:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.s
+.PHONY : disk_op/disk_init.cpp.s
+
+disk_op/volume.o: disk_op/volume.cpp.o
+
+.PHONY : disk_op/volume.o
+
+# target to build an object file
+disk_op/volume.cpp.o:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o
+.PHONY : disk_op/volume.cpp.o
+
+disk_op/volume.i: disk_op/volume.cpp.i
+
+.PHONY : disk_op/volume.i
+
+# target to preprocess a source file
+disk_op/volume.cpp.i:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.i
+.PHONY : disk_op/volume.cpp.i
+
+disk_op/volume.s: disk_op/volume.cpp.s
+
+.PHONY : disk_op/volume.s
+
+# target to generate assembly for a file
+disk_op/volume.cpp.s:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.s
+.PHONY : disk_op/volume.cpp.s
 
 inode/inode.o: inode/inode.cpp.o
 
@@ -190,8 +250,8 @@ inode/inode.o: inode/inode.cpp.o
 
 # target to build an object file
 inode/inode.cpp.o:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o
 .PHONY : inode/inode.cpp.o
 
 inode/inode.i: inode/inode.cpp.i
@@ -200,8 +260,8 @@ inode/inode.i: inode/inode.cpp.i
 
 # target to preprocess a source file
 inode/inode.cpp.i:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.i
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.i
 .PHONY : inode/inode.cpp.i
 
 inode/inode.s: inode/inode.cpp.s
@@ -210,8 +270,8 @@ inode/inode.s: inode/inode.cpp.s
 
 # target to generate assembly for a file
 inode/inode.cpp.s:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.s
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.s
 .PHONY : inode/inode.cpp.s
 
 io/io.o: io/io.cpp.o
@@ -220,8 +280,8 @@ io/io.o: io/io.cpp.o
 
 # target to build an object file
 io/io.cpp.o:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o
 .PHONY : io/io.cpp.o
 
 io/io.i: io/io.cpp.i
@@ -230,8 +290,8 @@ io/io.i: io/io.cpp.i
 
 # target to preprocess a source file
 io/io.cpp.i:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.i
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/io/io.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/io/io.cpp.i
 .PHONY : io/io.cpp.i
 
 io/io.s: io/io.cpp.s
@@ -240,69 +300,9 @@ io/io.s: io/io.cpp.s
 
 # target to generate assembly for a file
 io/io.cpp.s:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.s
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/io/io.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/io/io.cpp.s
 .PHONY : io/io.cpp.s
-
-volume/free_stack.o: volume/free_stack.cpp.o
-
-.PHONY : volume/free_stack.o
-
-# target to build an object file
-volume/free_stack.cpp.o:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.o
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o
-.PHONY : volume/free_stack.cpp.o
-
-volume/free_stack.i: volume/free_stack.cpp.i
-
-.PHONY : volume/free_stack.i
-
-# target to preprocess a source file
-volume/free_stack.cpp.i:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.i
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i
-.PHONY : volume/free_stack.cpp.i
-
-volume/free_stack.s: volume/free_stack.cpp.s
-
-.PHONY : volume/free_stack.s
-
-# target to generate assembly for a file
-volume/free_stack.cpp.s:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.s
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s
-.PHONY : volume/free_stack.cpp.s
-
-volume/volume.o: volume/volume.cpp.o
-
-.PHONY : volume/volume.o
-
-# target to build an object file
-volume/volume.cpp.o:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.o
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o
-.PHONY : volume/volume.cpp.o
-
-volume/volume.i: volume/volume.cpp.i
-
-.PHONY : volume/volume.i
-
-# target to preprocess a source file
-volume/volume.cpp.i:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.i
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.i
-.PHONY : volume/volume.cpp.i
-
-volume/volume.s: volume/volume.cpp.s
-
-.PHONY : volume/volume.s
-
-# target to generate assembly for a file
-volume/volume.cpp.s:
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.s
-	cd /home/wy/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.s
-.PHONY : volume/volume.cpp.s
 
 # Help Target
 help:
@@ -318,18 +318,18 @@ help:
 	@echo "... FS_lib_static"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... disk_op/disk_init.o"
+	@echo "... disk_op/disk_init.i"
+	@echo "... disk_op/disk_init.s"
+	@echo "... disk_op/volume.o"
+	@echo "... disk_op/volume.i"
+	@echo "... disk_op/volume.s"
 	@echo "... inode/inode.o"
 	@echo "... inode/inode.i"
 	@echo "... inode/inode.s"
 	@echo "... io/io.o"
 	@echo "... io/io.i"
 	@echo "... io/io.s"
-	@echo "... volume/free_stack.o"
-	@echo "... volume/free_stack.i"
-	@echo "... volume/free_stack.s"
-	@echo "... volume/volume.o"
-	@echo "... volume/volume.i"
-	@echo "... volume/volume.s"
 .PHONY : help
 
 
@@ -341,6 +341,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wy/FS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wy/CLionProjects/FS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

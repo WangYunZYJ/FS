@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wy/FS
+CMAKE_SOURCE_DIR = /home/wy/CLionProjects/FS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wy/FS/build
+CMAKE_BINARY_DIR = /home/wy/CLionProjects/FS/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/FS_lib_static.dir/depend.make
@@ -59,16 +59,16 @@ include src/CMakeFiles/FS_lib_static.dir/flags.make
 
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o: src/CMakeFiles/FS_lib_static.dir/flags.make
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o: ../src/io/io.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o"
-	cd /home/wy/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/io/io.cpp.o -c /home/wy/FS/src/io/io.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/io/io.cpp.o -c /home/wy/CLionProjects/FS/src/io/io.cpp
 
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_static.dir/io/io.cpp.i"
-	cd /home/wy/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/FS/src/io/io.cpp > CMakeFiles/FS_lib_static.dir/io/io.cpp.i
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/CLionProjects/FS/src/io/io.cpp > CMakeFiles/FS_lib_static.dir/io/io.cpp.i
 
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_static.dir/io/io.cpp.s"
-	cd /home/wy/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/src/io/io.cpp -o CMakeFiles/FS_lib_static.dir/io/io.cpp.s
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/src/io/io.cpp -o CMakeFiles/FS_lib_static.dir/io/io.cpp.s
 
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o.requires:
 
@@ -81,66 +81,66 @@ src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o.provides: src/CMakeFiles/FS_lib_sta
 src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o.provides.build: src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o
 
 
-src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o: src/CMakeFiles/FS_lib_static.dir/flags.make
-src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o: ../src/volume/free_stack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o"
-	cd /home/wy/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o -c /home/wy/FS/src/volume/free_stack.cpp
+src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o: src/CMakeFiles/FS_lib_static.dir/flags.make
+src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o: ../src/disk_op/disk_init.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o -c /home/wy/CLionProjects/FS/src/disk_op/disk_init.cpp
 
-src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i"
-	cd /home/wy/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/FS/src/volume/free_stack.cpp > CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.i
+src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.i"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/CLionProjects/FS/src/disk_op/disk_init.cpp > CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.i
 
-src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s"
-	cd /home/wy/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/src/volume/free_stack.cpp -o CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.s
+src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.s"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/src/disk_op/disk_init.cpp -o CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.s
 
-src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o.requires:
+src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o.requires
+.PHONY : src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o.requires
 
-src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o.provides: src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o.provides.build
-.PHONY : src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o.provides
+src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o.provides: src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o.provides.build
+.PHONY : src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o.provides
 
-src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o.provides.build: src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o
+src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o.provides.build: src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o
 
 
-src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: src/CMakeFiles/FS_lib_static.dir/flags.make
-src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o: ../src/volume/volume.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o"
-	cd /home/wy/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o -c /home/wy/FS/src/volume/volume.cpp
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o: src/CMakeFiles/FS_lib_static.dir/flags.make
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o: ../src/disk_op/volume.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o -c /home/wy/CLionProjects/FS/src/disk_op/volume.cpp
 
-src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_static.dir/volume/volume.cpp.i"
-	cd /home/wy/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/FS/src/volume/volume.cpp > CMakeFiles/FS_lib_static.dir/volume/volume.cpp.i
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.i"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/CLionProjects/FS/src/disk_op/volume.cpp > CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.i
 
-src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_static.dir/volume/volume.cpp.s"
-	cd /home/wy/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/src/volume/volume.cpp -o CMakeFiles/FS_lib_static.dir/volume/volume.cpp.s
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.s"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/src/disk_op/volume.cpp -o CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.s
 
-src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o.requires:
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o.requires:
 
-.PHONY : src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o.requires
+.PHONY : src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o.requires
 
-src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o.provides: src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o.provides.build
-.PHONY : src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o.provides
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o.provides: src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o.provides.build
+.PHONY : src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o.provides
 
-src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o.provides.build: src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o.provides.build: src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o
 
 
 src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o: src/CMakeFiles/FS_lib_static.dir/flags.make
 src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o: ../src/inode/inode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o"
-	cd /home/wy/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o -c /home/wy/FS/src/inode/inode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o -c /home/wy/CLionProjects/FS/src/inode/inode.cpp
 
 src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_static.dir/inode/inode.cpp.i"
-	cd /home/wy/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/FS/src/inode/inode.cpp > CMakeFiles/FS_lib_static.dir/inode/inode.cpp.i
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/CLionProjects/FS/src/inode/inode.cpp > CMakeFiles/FS_lib_static.dir/inode/inode.cpp.i
 
 src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_static.dir/inode/inode.cpp.s"
-	cd /home/wy/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/src/inode/inode.cpp -o CMakeFiles/FS_lib_static.dir/inode/inode.cpp.s
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/src/inode/inode.cpp -o CMakeFiles/FS_lib_static.dir/inode/inode.cpp.s
 
 src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o.requires:
 
@@ -156,22 +156,22 @@ src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o.provides.build: src/CMakeFile
 # Object files for target FS_lib_static
 FS_lib_static_OBJECTS = \
 "CMakeFiles/FS_lib_static.dir/io/io.cpp.o" \
-"CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o" \
-"CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o" \
+"CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o" \
+"CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o" \
 "CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o"
 
 # External object files for target FS_lib_static
 FS_lib_static_EXTERNAL_OBJECTS =
 
 lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o
-lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o
-lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o
+lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o
+lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o
 lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o
 lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/build.make
 lib/libwyfs.a: src/CMakeFiles/FS_lib_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library ../lib/libwyfs.a"
-	cd /home/wy/FS/build/src && $(CMAKE_COMMAND) -P CMakeFiles/FS_lib_static.dir/cmake_clean_target.cmake
-	cd /home/wy/FS/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FS_lib_static.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library ../lib/libwyfs.a"
+	cd /home/wy/CLionProjects/FS/build/src && $(CMAKE_COMMAND) -P CMakeFiles/FS_lib_static.dir/cmake_clean_target.cmake
+	cd /home/wy/CLionProjects/FS/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FS_lib_static.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/FS_lib_static.dir/build: lib/libwyfs.a
@@ -179,17 +179,17 @@ src/CMakeFiles/FS_lib_static.dir/build: lib/libwyfs.a
 .PHONY : src/CMakeFiles/FS_lib_static.dir/build
 
 src/CMakeFiles/FS_lib_static.dir/requires: src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o.requires
-src/CMakeFiles/FS_lib_static.dir/requires: src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o.requires
-src/CMakeFiles/FS_lib_static.dir/requires: src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o.requires
+src/CMakeFiles/FS_lib_static.dir/requires: src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o.requires
+src/CMakeFiles/FS_lib_static.dir/requires: src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o.requires
 src/CMakeFiles/FS_lib_static.dir/requires: src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o.requires
 
 .PHONY : src/CMakeFiles/FS_lib_static.dir/requires
 
 src/CMakeFiles/FS_lib_static.dir/clean:
-	cd /home/wy/FS/build/src && $(CMAKE_COMMAND) -P CMakeFiles/FS_lib_static.dir/cmake_clean.cmake
+	cd /home/wy/CLionProjects/FS/build/src && $(CMAKE_COMMAND) -P CMakeFiles/FS_lib_static.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/FS_lib_static.dir/clean
 
 src/CMakeFiles/FS_lib_static.dir/depend:
-	cd /home/wy/FS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wy/FS /home/wy/FS/src /home/wy/FS/build /home/wy/FS/build/src /home/wy/FS/build/src/CMakeFiles/FS_lib_static.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/wy/CLionProjects/FS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wy/CLionProjects/FS /home/wy/CLionProjects/FS/src /home/wy/CLionProjects/FS/build /home/wy/CLionProjects/FS/build/src /home/wy/CLionProjects/FS/build/src/CMakeFiles/FS_lib_static.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/FS_lib_static.dir/depend
 

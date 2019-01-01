@@ -1,3 +1,7 @@
+//
+// Created by wy on 19-1-1.
+//
+
 #ifndef FS_IO_H
 #define FS_IO_H
 
@@ -14,9 +18,13 @@ namespace wyfs
         io();
     public:
         static shared_ptr<io>& get_instance();
-        void write_Byte(char* msg, int offset);
-        char* read_Byte(int offset, int len);
+
+        fstream& seekg(int offset, ios_base::seekdir dir = ios::beg);
+        fstream& read(char *s, streamsize count);
+
+        fstream& seekp(int offset, ios_base::seekdir dir = ios::beg);
+        fstream& write(const char *s, streamsize count);
     };
 }
 
-#endif
+#endif //FS_IO_H

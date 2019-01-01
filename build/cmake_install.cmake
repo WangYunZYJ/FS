@@ -1,8 +1,8 @@
-# Install script for directory: /home/wy/FS
+# Install script for directory: /home/wy/CLionProjects/FS
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wy/FS/install")
+  set(CMAKE_INSTALL_PREFIX "/home/wy/CLionProjects/FS/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/wy/FS/build/src/cmake_install.cmake")
-  include("/home/wy/FS/build/test/cmake_install.cmake")
+  include("/home/wy/CLionProjects/FS/build/src/cmake_install.cmake")
+  include("/home/wy/CLionProjects/FS/build/test/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wy/FS/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wy/CLionProjects/FS/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

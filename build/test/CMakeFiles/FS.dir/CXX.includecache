@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+..//include/disk_op/volume.h
+memory
+-
+tiff.h
+-
+vector
+-
+
 ../include/catch/catch.h
 TargetConditionals.h
 -
@@ -446,12 +454,16 @@ algorithm
 cassert
 -
 
-../include/constants/constant.h
+../include/constant/constants.h
+string
+-
 tiff.h
 -
-cstddef
+
+../include/disk_op/disk_init.h
+vector
 -
-string
+tiff.h
 -
 
 ../include/io/io.h
@@ -460,15 +472,15 @@ memory
 fstream
 -
 
-/home/wy/FS/test/io/io_test.cpp
-io.h
-/home/wy/FS/test/io/io.h
+/home/wy/CLionProjects/FS/test/disk_op/disk_init_test.cpp
+include/disk_op/volume.h
+-
+disk_init.h
+/home/wy/CLionProjects/FS/test/disk_op/disk_init.h
 catch.h
-/home/wy/FS/test/io/catch.h
-constant.h
-/home/wy/FS/test/io/constant.h
+/home/wy/CLionProjects/FS/test/disk_op/catch.h
+constant/constants.h
+/home/wy/CLionProjects/FS/test/disk_op/constant/constants.h
 
-/home/wy/FS/test/test.cpp
-
-/home/wy/FS/test/volume/free_stack_test.cpp
+/home/wy/CLionProjects/FS/test/test.cpp
 

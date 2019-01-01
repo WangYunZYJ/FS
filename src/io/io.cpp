@@ -1,8 +1,14 @@
+//
+// Created by wy on 19-1-1.
+//
+
 #include <iostream>
 #include "io/io.h"
-#include "constant.h"
 #include <assert.h>
 #include <cstring>
+#include <include/io/io.h>
+#include <include/constant/constants.h>
+
 
 using namespace wyfs;
 
@@ -21,20 +27,23 @@ shared_ptr<io>& io::get_instance()
     return _instance;
 }
 
-
-void io::write_Byte(char* msg, int offset)
-{
-    fs.seekp(offset, ios::beg);
-    fs.write(msg, 1);
+fstream &io::write(const char *s, streamsize count) {
+    fs.write(s, count);
+    return fs;
 }
 
-char* io::read_Byte(int offset, int len)
-{
-    char *buf = new char[len+1];
-    fs.seekg(offset, ios::beg);
-    fs.read(buf, len);
-    buf[len] = '\0';
-    return buf;
+fstream &io::seekp(int offset, ios_base::seekdir dir) {
+    fs.seekp(offset, dir);
+    return fs;
 }
 
+fstream &io::seekg(int offset, ios_base::seekdir dir) {
+    fs.seekg(offset, dir);
+    return fs;
+}
+
+fstream &io::read(char *s, streamsize count) {
+    fs.read(s, count);
+    return fs;
+}
 

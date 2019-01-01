@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wy/FS
+CMAKE_SOURCE_DIR = /home/wy/CLionProjects/FS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wy/FS/build
+CMAKE_BINARY_DIR = /home/wy/CLionProjects/FS/build
 
 # Include any dependencies generated for this target.
 include test/CMakeFiles/FS.dir/depend.make
@@ -57,42 +57,18 @@ include test/CMakeFiles/FS.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/CMakeFiles/FS.dir/flags.make
 
-test/CMakeFiles/FS.dir/io/io_test.cpp.o: test/CMakeFiles/FS.dir/flags.make
-test/CMakeFiles/FS.dir/io/io_test.cpp.o: ../test/io/io_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/FS.dir/io/io_test.cpp.o"
-	cd /home/wy/FS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS.dir/io/io_test.cpp.o -c /home/wy/FS/test/io/io_test.cpp
-
-test/CMakeFiles/FS.dir/io/io_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS.dir/io/io_test.cpp.i"
-	cd /home/wy/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/FS/test/io/io_test.cpp > CMakeFiles/FS.dir/io/io_test.cpp.i
-
-test/CMakeFiles/FS.dir/io/io_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS.dir/io/io_test.cpp.s"
-	cd /home/wy/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/test/io/io_test.cpp -o CMakeFiles/FS.dir/io/io_test.cpp.s
-
-test/CMakeFiles/FS.dir/io/io_test.cpp.o.requires:
-
-.PHONY : test/CMakeFiles/FS.dir/io/io_test.cpp.o.requires
-
-test/CMakeFiles/FS.dir/io/io_test.cpp.o.provides: test/CMakeFiles/FS.dir/io/io_test.cpp.o.requires
-	$(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/io/io_test.cpp.o.provides.build
-.PHONY : test/CMakeFiles/FS.dir/io/io_test.cpp.o.provides
-
-test/CMakeFiles/FS.dir/io/io_test.cpp.o.provides.build: test/CMakeFiles/FS.dir/io/io_test.cpp.o
-
-
 test/CMakeFiles/FS.dir/test.cpp.o: test/CMakeFiles/FS.dir/flags.make
 test/CMakeFiles/FS.dir/test.cpp.o: ../test/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/FS.dir/test.cpp.o"
-	cd /home/wy/FS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS.dir/test.cpp.o -c /home/wy/FS/test/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/FS.dir/test.cpp.o"
+	cd /home/wy/CLionProjects/FS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS.dir/test.cpp.o -c /home/wy/CLionProjects/FS/test/test.cpp
 
 test/CMakeFiles/FS.dir/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS.dir/test.cpp.i"
-	cd /home/wy/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/FS/test/test.cpp > CMakeFiles/FS.dir/test.cpp.i
+	cd /home/wy/CLionProjects/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/CLionProjects/FS/test/test.cpp > CMakeFiles/FS.dir/test.cpp.i
 
 test/CMakeFiles/FS.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS.dir/test.cpp.s"
-	cd /home/wy/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/test/test.cpp -o CMakeFiles/FS.dir/test.cpp.s
+	cd /home/wy/CLionProjects/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/test/test.cpp -o CMakeFiles/FS.dir/test.cpp.s
 
 test/CMakeFiles/FS.dir/test.cpp.o.requires:
 
@@ -105,63 +81,60 @@ test/CMakeFiles/FS.dir/test.cpp.o.provides: test/CMakeFiles/FS.dir/test.cpp.o.re
 test/CMakeFiles/FS.dir/test.cpp.o.provides.build: test/CMakeFiles/FS.dir/test.cpp.o
 
 
-test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o: test/CMakeFiles/FS.dir/flags.make
-test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o: ../test/volume/free_stack_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o"
-	cd /home/wy/FS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS.dir/volume/free_stack_test.cpp.o -c /home/wy/FS/test/volume/free_stack_test.cpp
+test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o: test/CMakeFiles/FS.dir/flags.make
+test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o: ../test/disk_op/disk_init_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o"
+	cd /home/wy/CLionProjects/FS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o -c /home/wy/CLionProjects/FS/test/disk_op/disk_init_test.cpp
 
-test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS.dir/volume/free_stack_test.cpp.i"
-	cd /home/wy/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/FS/test/volume/free_stack_test.cpp > CMakeFiles/FS.dir/volume/free_stack_test.cpp.i
+test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.i"
+	cd /home/wy/CLionProjects/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/CLionProjects/FS/test/disk_op/disk_init_test.cpp > CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.i
 
-test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS.dir/volume/free_stack_test.cpp.s"
-	cd /home/wy/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/FS/test/volume/free_stack_test.cpp -o CMakeFiles/FS.dir/volume/free_stack_test.cpp.s
+test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.s"
+	cd /home/wy/CLionProjects/FS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/test/disk_op/disk_init_test.cpp -o CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.s
 
-test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o.requires:
+test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o.requires:
 
-.PHONY : test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o.requires
+.PHONY : test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o.requires
 
-test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o.provides: test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o.requires
-	$(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o.provides.build
-.PHONY : test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o.provides
+test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o.provides: test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o.requires
+	$(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o.provides.build
+.PHONY : test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o.provides
 
-test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o.provides.build: test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o
+test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o.provides.build: test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o
 
 
 # Object files for target FS
 FS_OBJECTS = \
-"CMakeFiles/FS.dir/io/io_test.cpp.o" \
 "CMakeFiles/FS.dir/test.cpp.o" \
-"CMakeFiles/FS.dir/volume/free_stack_test.cpp.o"
+"CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o"
 
 # External object files for target FS
 FS_EXTERNAL_OBJECTS =
 
-bin/FS: test/CMakeFiles/FS.dir/io/io_test.cpp.o
 bin/FS: test/CMakeFiles/FS.dir/test.cpp.o
-bin/FS: test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o
+bin/FS: test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o
 bin/FS: test/CMakeFiles/FS.dir/build.make
 bin/FS: test/CMakeFiles/FS.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ../bin/FS"
-	cd /home/wy/FS/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FS.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../bin/FS"
+	cd /home/wy/CLionProjects/FS/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FS.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/CMakeFiles/FS.dir/build: bin/FS
 
 .PHONY : test/CMakeFiles/FS.dir/build
 
-test/CMakeFiles/FS.dir/requires: test/CMakeFiles/FS.dir/io/io_test.cpp.o.requires
 test/CMakeFiles/FS.dir/requires: test/CMakeFiles/FS.dir/test.cpp.o.requires
-test/CMakeFiles/FS.dir/requires: test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o.requires
+test/CMakeFiles/FS.dir/requires: test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o.requires
 
 .PHONY : test/CMakeFiles/FS.dir/requires
 
 test/CMakeFiles/FS.dir/clean:
-	cd /home/wy/FS/build/test && $(CMAKE_COMMAND) -P CMakeFiles/FS.dir/cmake_clean.cmake
+	cd /home/wy/CLionProjects/FS/build/test && $(CMAKE_COMMAND) -P CMakeFiles/FS.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/FS.dir/clean
 
 test/CMakeFiles/FS.dir/depend:
-	cd /home/wy/FS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wy/FS /home/wy/FS/test /home/wy/FS/build /home/wy/FS/build/test /home/wy/FS/build/test/CMakeFiles/FS.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/wy/CLionProjects/FS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wy/CLionProjects/FS /home/wy/CLionProjects/FS/test /home/wy/CLionProjects/FS/build /home/wy/CLionProjects/FS/build/test /home/wy/CLionProjects/FS/build/test/CMakeFiles/FS.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/FS.dir/depend
 

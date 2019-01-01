@@ -14,32 +14,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d92c80d8-e299-4923-8115-b60658031541" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/io/io_test.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/constant/constants.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/disk_op/disk_init.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/include/disk_op/volume.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/disk_op/disk_init.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/disk_op/volume.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/disk_op/disk_init_test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/bin/FS" beforeDir="false" afterPath="$PROJECT_DIR$/build/bin/FS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/install_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/install_manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/install_manifest.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/lib/libwyfs.a" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/libwyfs.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/lib/libwyfs.so.1.2" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/libwyfs.so.1.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/volume/free_stack.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_shared.dir/volume/volume.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/io/io.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/volume/free_stack.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/CMakeFiles/FS_lib_static.dir/volume/volume.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/build.make" afterDir="false" />
@@ -47,21 +70,39 @@
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/io/io_test.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/test/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/FS.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/FS.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_shared.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/FS_lib_static.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/build.make" afterDir="false" />
@@ -71,20 +112,41 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/FS.dir/test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/disk" beforeDir="false" afterPath="$PROJECT_DIR$/disk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/constants/constant.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/constants/constant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/constants/constant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/inode/inode.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/inode/inode.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/io/io.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/io/io.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/include/constants/constant.h" beforeDir="false" afterPath="$PROJECT_DIR$/install/include/constants/constant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/include/io/io.h" beforeDir="false" afterPath="$PROJECT_DIR$/install/include/io/io.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/lib/libwyfs.a" beforeDir="false" afterPath="$PROJECT_DIR$/install/lib/libwyfs.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install/lib/libwyfs.so.1.2" beforeDir="false" afterPath="$PROJECT_DIR$/install/lib/libwyfs.so.1.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/volume/block.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/volume/free_stack.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/volume/volume.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/include/catch/catch.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/include/constants/constant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/include/inode/inode.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/include/io/io.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/include/volume/block.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/include/volume/free_stack.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/include/volume/volume.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/lib/libhelloworld.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/lib/libhelloworld.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/lib/libhelloworld.so.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/lib/libhelloworld.so.1.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/lib/libwyfs.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/lib/libwyfs.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/lib/libwyfs.so.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/install/lib/libwyfs.so.1.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inode/inode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/inode/inode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/io.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/io.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/volume/free_stack.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/volume/volume.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/io/io_test.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/volume/free_stack_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/volume/free_stack_test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/volume/free_stack_test.cpp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,53 +208,78 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-353889397">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cpp" value="6" />
+          <entry key="h" value="9" />
+          <entry key="txt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CMakeLists.txt" value="4" />
+          <entry key="ObjectiveC" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cpp" value="4857" />
+          <entry key="h" value="1578" />
+          <entry key="txt" value="141" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CMakeLists.txt" value="141" />
+          <entry key="Doxygen file" value="8" />
+          <entry key="ObjectiveC" value="6427" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.cidr.testingFrameworks.usages">
+        <counts>
+          <entry key="Catch Test" value="72" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/constants/constant.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/volume/free_stack_test.cpp">
+        <entry file="file://$PROJECT_DIR$/test/disk_op/disk_init_test.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="594">
-              <caret line="41" column="17" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/io/io_test.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="24" />
+              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
-                <element signature="e#26#41#0" expanded="true" />
+                <element signature="e#61#96#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/c++/5/ostream">
+        <entry file="file://$PROJECT_DIR$/include/inode/inode.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="589" column="4" selection-start-line="589" selection-start-column="4" selection-end-line="589" selection-end-column="4" />
+            <state relative-caret-position="296">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="39" selection-end-column="24" />
+              <folding>
+                <element signature="e#74#91#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/volume/volume.cpp">
+        <entry file="file://$PROJECT_DIR$/src/inode/inode.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="69" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="69" />
+            <state relative-caret-position="352">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -200,50 +287,80 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/io/io.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="660">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
-                <element signature="e#33#50#0" expanded="true" />
+                <element signature="e#68#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/disk_op/disk_init.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="28" />
+              <folding>
+                <element signature="e#82#99#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/disk_op/volume.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
+              <folding>
+                <element signature="e#77#94#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/io/io.cpp">
+        <entry file="file://$PROJECT_DIR$/src/disk_op/volume.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+            <state relative-caret-position="535">
+              <caret line="163" column="40" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="40" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#35#70#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/src/disk_op/disk_init.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="-232">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <folding>
+                <element signature="e#35#73#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test.cpp">
+        <entry file="file://$PROJECT_DIR$/include/catch/catch.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="5341" selection-start-line="5341" selection-end-line="5341" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/constant/constants.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/include/c++/5/istream">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="485" column="6" selection-start-line="485" selection-start-column="6" selection-end-line="485" selection-end-column="6" />
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="37" />
+              <folding>
+                <element signature="e#82#99#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -257,21 +374,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/include/IO/io.h" />
-        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/include/inode/inode.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/volume/volume.h" />
-        <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/volume/block.h" />
         <option value="$PROJECT_DIR$/src/volume/volume.cpp" />
         <option value="$PROJECT_DIR$/include/volume/free_stack.h" />
         <option value="$PROJECT_DIR$/src/volume/free_stack.cpp" />
         <option value="$PROJECT_DIR$/include/constants/constant.h" />
-        <option value="$PROJECT_DIR$/test/test.cpp" />
-        <option value="$PROJECT_DIR$/include/io/io.h" />
         <option value="$PROJECT_DIR$/test/volume/free_stack_test.cpp" />
         <option value="$PROJECT_DIR$/test/io/io_test.cpp" />
+        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/include/io/io.h" />
+        <option value="$PROJECT_DIR$/test/test.cpp" />
         <option value="$PROJECT_DIR$/src/io/io.cpp" />
+        <option value="$PROJECT_DIR$/include/inode/inode.h" />
+        <option value="$PROJECT_DIR$/src/inode/inode.cpp" />
+        <option value="$PROJECT_DIR$/include/disk_op/disk_init.h" />
+        <option value="$PROJECT_DIR$/include/constant/constants.h" />
+        <option value="$PROJECT_DIR$/src/disk_op/disk_init.cpp" />
+        <option value="$PROJECT_DIR$/include/disk_op/volume.h" />
+        <option value="$PROJECT_DIR$/test/disk_op/disk_init_test.cpp" />
+        <option value="$PROJECT_DIR$/src/disk_op/volume.cpp" />
       </list>
     </option>
   </component>
@@ -283,10 +407,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="528" />
-    <option name="y" value="11" />
-    <option name="width" value="1299" />
-    <option name="height" value="736" />
+    <option name="x" value="1312" />
+    <option name="y" value="24" />
+    <option name="width" value="1248" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -316,7 +440,19 @@
               <item name="FS" type="b2602c69:ProjectViewProjectNode" />
               <item name="FS" type="462c0819:PsiDirectoryNode" />
               <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="constant" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FS" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="disk_op" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FS" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+              <item name="inode" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FS" type="b2602c69:ProjectViewProjectNode" />
@@ -327,13 +463,13 @@
             <path>
               <item name="FS" type="b2602c69:ProjectViewProjectNode" />
               <item name="FS" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="volume" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FS" type="b2602c69:ProjectViewProjectNode" />
               <item name="FS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="disk_op" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FS" type="b2602c69:ProjectViewProjectNode" />
@@ -350,19 +486,13 @@
             <path>
               <item name="FS" type="b2602c69:ProjectViewProjectNode" />
               <item name="FS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="volume" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FS" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FS" type="b2602c69:ProjectViewProjectNode" />
               <item name="FS" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="io" type="462c0819:PsiDirectoryNode" />
+              <item name="disk_op" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -388,28 +518,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Catch.io write">
+  <component name="RunManager" selected="Catch.apply for block">
+    <configuration name="apply for block" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[apply_block]" TEST_METHOD="apply for block" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="create file (2)" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[createFile]" TEST_METHOD="create file" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="init file" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[init_file]" TEST_METHOD="init file" TEST_MODE="SUITE_TEST">
+    <configuration name="disk init" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[disk_init]" TEST_METHOD="disk init" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="io write" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[io_write]" TEST_METHOD="io write" TEST_MODE="SUITE_TEST">
+    <configuration name="io write" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[io_write]" TEST_METHOD="io write" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="io_read" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[io_read]" TEST_METHOD="io_read" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="io_write" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[io_write]" TEST_METHOD="io_write" TEST_MODE="SUITE_TEST">
+    <configuration name="io_read" type="CMakeCatchTestRunConfigurationType" factoryName="Catch Test" temporary="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FS" TARGET_NAME="FS" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FS" RUN_TARGET_NAME="FS" TEST_CLASS="[io_read]" TEST_METHOD="io_read" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -440,18 +570,18 @@
       <item itemvalue="Application.FS_lib_static" />
       <item itemvalue="Application.FS" />
       <item itemvalue="Catch.create file (2)" />
-      <item itemvalue="Catch.io_write" />
       <item itemvalue="Catch.io write" />
       <item itemvalue="Catch.io_read" />
-      <item itemvalue="Catch.init file" />
+      <item itemvalue="Catch.disk init" />
+      <item itemvalue="Catch.apply for block" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Catch.apply for block" />
+        <item itemvalue="Catch.disk init" />
+        <item itemvalue="Catch.create file (2)" />
         <item itemvalue="Catch.io write" />
         <item itemvalue="Catch.io_read" />
-        <item itemvalue="Catch.init file" />
-        <item itemvalue="Catch.create file (2)" />
-        <item itemvalue="Catch.io_write" />
       </list>
     </recent_temporary>
   </component>
@@ -469,64 +599,65 @@
       <workItem from="1546162933003" duration="6887000" />
       <workItem from="1546173136487" duration="6050000" />
       <workItem from="1546220603171" duration="15620000" />
+      <workItem from="1546325788527" duration="20374000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="io_read - 2018.12.31 at 14h 23m 04s.xml">
-      <configuration name="io_read" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="apply_for_block - 2019.01.01 at 22h 00m 14s.xml">
+      <configuration name="apply for block" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="init_file - 2018.12.31 at 14h 23m 57s.xml">
-      <configuration name="init file" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="disk_init - 2019.01.01 at 22h 00m 33s.xml">
+      <configuration name="disk init" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="io_write - 2018.12.31 at 14h 24m 00s.xml">
-      <configuration name="io write" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="apply_for_block - 2019.01.01 at 22h 00m 45s.xml">
+      <configuration name="apply for block" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="io_read - 2018.12.31 at 14h 24m 19s.xml">
-      <configuration name="io_read" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="disk_init - 2019.01.01 at 22h 01m 06s.xml">
+      <configuration name="disk init" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="init_file - 2018.12.31 at 14h 24m 42s.xml">
-      <configuration name="init file" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="apply_for_block - 2019.01.01 at 22h 01m 19s.xml">
+      <configuration name="apply for block" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="io_write - 2018.12.31 at 14h 24m 45s.xml">
-      <configuration name="io write" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="disk_init - 2019.01.01 at 22h 01m 25s.xml">
+      <configuration name="disk init" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="init_file - 2018.12.31 at 14h 28m 21s.xml">
-      <configuration name="init file" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="apply_for_block - 2019.01.01 at 22h 01m 51s.xml">
+      <configuration name="apply for block" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="io_write - 2018.12.31 at 14h 28m 25s.xml">
-      <configuration name="io write" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="disk_init - 2019.01.01 at 22h 02m 09s.xml">
+      <configuration name="disk init" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="io_read - 2018.12.31 at 14h 28m 44s.xml">
-      <configuration name="io_read" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="apply_for_block - 2019.01.01 at 22h 02m 13s.xml">
+      <configuration name="apply for block" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="io_read - 2018.12.31 at 14h 30m 16s.xml">
-      <configuration name="io_read" configurationId="CMakeCatchTestRunConfigurationType" />
+    <history-entry file="apply_for_block - 2019.01.01 at 22h 02m 30s.xml">
+      <configuration name="apply for block" configurationId="CMakeCatchTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28699000" />
+    <option name="totallyTimeSpent" value="49073000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="2497" height="1452" extended-state="6" />
+    <frame x="65" y="-4" width="2495" height="1444" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18304117" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09498573" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329296" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329296" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34595004" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39969718" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.336109" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.335352" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.332324" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.329296" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32869297" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -549,11 +680,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="22">
@@ -562,11 +688,9 @@
           <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="41" selection-start-line="6" selection-end-line="7" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -574,13 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="119" selection-start-line="119" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/inode/inode.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -598,23 +715,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/catch/catch.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/catch/catch.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73612">
-          <caret line="5341" selection-start-line="5341" selection-end-line="5341" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/catch/catch.h" />
     <entry file="file:///usr/include/c++/5/bits/ostream.tcc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -626,9 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
           <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding>
-            <element signature="e#86#102#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,9 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="20" selection-end-column="59" />
-          <folding>
-            <element signature="e#43#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -646,23 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/constants/constant.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/istream">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="485" column="6" selection-start-line="485" selection-start-column="6" selection-end-line="485" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -678,48 +756,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/include/constants/constant.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/io/io.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="e#33#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/volume/volume.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="69" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="198">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/volume/free_stack_test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
+        <state relative-caret-position="902">
           <caret line="41" column="17" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/ostream">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="589" column="4" selection-start-line="589" selection-start-column="4" selection-end-line="589" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -733,12 +780,155 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/volume/volume.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="69" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/ostream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="589" column="4" selection-start-line="589" selection-start-column="4" selection-end-line="589" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/istream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="485" column="6" selection-start-line="485" selection-start-column="6" selection-end-line="485" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/io/io.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+        <state relative-caret-position="202">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#35#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/inode/inode.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/catch/catch.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="5341" selection-start-line="5341" selection-end-line="5341" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/inode/inode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="39" selection-end-column="24" />
+          <folding>
+            <element signature="e#74#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/io/io.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#68#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/disk_op/disk_init.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="e#82#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/constant/constants.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="e#82#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/disk_op/disk_init.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="e#35#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/disk_op/volume.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="93" selection-start-line="19" selection-start-column="93" selection-end-line="19" selection-end-column="93" />
+          <folding>
+            <element signature="e#77#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/disk_op/disk_init_test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="e#61#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/disk_op/volume.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="163" column="40" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="40" />
+          <folding>
+            <element signature="e#35#70#0" expanded="true" />
           </folding>
         </state>
       </provider>

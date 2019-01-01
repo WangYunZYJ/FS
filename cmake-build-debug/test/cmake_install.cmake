@@ -1,4 +1,4 @@
-# Install script for directory: /home/wy/FS/test
+# Install script for directory: /home/wy/CLionProjects/FS/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

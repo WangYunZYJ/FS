@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wy/FS
+CMAKE_SOURCE_DIR = /home/wy/CLionProjects/FS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wy/FS/build
+CMAKE_BINARY_DIR = /home/wy/CLionProjects/FS/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wy/FS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wy/FS/build/CMakeFiles /home/wy/FS/build/test/CMakeFiles/progress.marks
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wy/FS/build/CMakeFiles 0
+	cd /home/wy/CLionProjects/FS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wy/CLionProjects/FS/build/CMakeFiles /home/wy/CLionProjects/FS/build/test/CMakeFiles/progress.marks
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wy/CLionProjects/FS/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/clean
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +141,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wy/FS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wy/CLionProjects/FS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/FS.dir/rule:
-	cd /home/wy/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/FS.dir/rule
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/FS.dir/rule
 .PHONY : test/CMakeFiles/FS.dir/rule
 
 # Convenience name for target.
@@ -166,35 +166,35 @@ FS: test/CMakeFiles/FS.dir/rule
 
 # fast build rule for target.
 FS/fast:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/build
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/build
 .PHONY : FS/fast
 
-io/io_test.o: io/io_test.cpp.o
+disk_op/disk_init_test.o: disk_op/disk_init_test.cpp.o
 
-.PHONY : io/io_test.o
+.PHONY : disk_op/disk_init_test.o
 
 # target to build an object file
-io/io_test.cpp.o:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/io/io_test.cpp.o
-.PHONY : io/io_test.cpp.o
+disk_op/disk_init_test.cpp.o:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o
+.PHONY : disk_op/disk_init_test.cpp.o
 
-io/io_test.i: io/io_test.cpp.i
+disk_op/disk_init_test.i: disk_op/disk_init_test.cpp.i
 
-.PHONY : io/io_test.i
+.PHONY : disk_op/disk_init_test.i
 
 # target to preprocess a source file
-io/io_test.cpp.i:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/io/io_test.cpp.i
-.PHONY : io/io_test.cpp.i
+disk_op/disk_init_test.cpp.i:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.i
+.PHONY : disk_op/disk_init_test.cpp.i
 
-io/io_test.s: io/io_test.cpp.s
+disk_op/disk_init_test.s: disk_op/disk_init_test.cpp.s
 
-.PHONY : io/io_test.s
+.PHONY : disk_op/disk_init_test.s
 
 # target to generate assembly for a file
-io/io_test.cpp.s:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/io/io_test.cpp.s
-.PHONY : io/io_test.cpp.s
+disk_op/disk_init_test.cpp.s:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.s
+.PHONY : disk_op/disk_init_test.cpp.s
 
 test.o: test.cpp.o
 
@@ -202,7 +202,7 @@ test.o: test.cpp.o
 
 # target to build an object file
 test.cpp.o:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/test.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/test.cpp.o
 .PHONY : test.cpp.o
 
 test.i: test.cpp.i
@@ -211,7 +211,7 @@ test.i: test.cpp.i
 
 # target to preprocess a source file
 test.cpp.i:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/test.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/test.cpp.i
 .PHONY : test.cpp.i
 
 test.s: test.cpp.s
@@ -220,35 +220,8 @@ test.s: test.cpp.s
 
 # target to generate assembly for a file
 test.cpp.s:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/test.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/test.cpp.s
 .PHONY : test.cpp.s
-
-volume/free_stack_test.o: volume/free_stack_test.cpp.o
-
-.PHONY : volume/free_stack_test.o
-
-# target to build an object file
-volume/free_stack_test.cpp.o:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.o
-.PHONY : volume/free_stack_test.cpp.o
-
-volume/free_stack_test.i: volume/free_stack_test.cpp.i
-
-.PHONY : volume/free_stack_test.i
-
-# target to preprocess a source file
-volume/free_stack_test.cpp.i:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.i
-.PHONY : volume/free_stack_test.cpp.i
-
-volume/free_stack_test.s: volume/free_stack_test.cpp.s
-
-.PHONY : volume/free_stack_test.s
-
-# target to generate assembly for a file
-volume/free_stack_test.cpp.s:
-	cd /home/wy/FS/build && $(MAKE) -f test/CMakeFiles/FS.dir/build.make test/CMakeFiles/FS.dir/volume/free_stack_test.cpp.s
-.PHONY : volume/free_stack_test.cpp.s
 
 # Help Target
 help:
@@ -263,15 +236,12 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... edit_cache"
-	@echo "... io/io_test.o"
-	@echo "... io/io_test.i"
-	@echo "... io/io_test.s"
+	@echo "... disk_op/disk_init_test.o"
+	@echo "... disk_op/disk_init_test.i"
+	@echo "... disk_op/disk_init_test.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
-	@echo "... volume/free_stack_test.o"
-	@echo "... volume/free_stack_test.i"
-	@echo "... volume/free_stack_test.s"
 .PHONY : help
 
 
@@ -283,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wy/FS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wy/CLionProjects/FS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
