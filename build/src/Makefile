@@ -214,6 +214,36 @@ disk_op/disk_init.cpp.s:
 	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.s
 .PHONY : disk_op/disk_init.cpp.s
 
+disk_op/inode_block.o: disk_op/inode_block.cpp.o
+
+.PHONY : disk_op/inode_block.o
+
+# target to build an object file
+disk_op/inode_block.cpp.o:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/inode_block.cpp.o
+.PHONY : disk_op/inode_block.cpp.o
+
+disk_op/inode_block.i: disk_op/inode_block.cpp.i
+
+.PHONY : disk_op/inode_block.i
+
+# target to preprocess a source file
+disk_op/inode_block.cpp.i:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/inode_block.cpp.i
+.PHONY : disk_op/inode_block.cpp.i
+
+disk_op/inode_block.s: disk_op/inode_block.cpp.s
+
+.PHONY : disk_op/inode_block.s
+
+# target to generate assembly for a file
+disk_op/inode_block.cpp.s:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/inode_block.cpp.s
+.PHONY : disk_op/inode_block.cpp.s
+
 disk_op/volume.o: disk_op/volume.cpp.o
 
 .PHONY : disk_op/volume.o
@@ -321,6 +351,9 @@ help:
 	@echo "... disk_op/disk_init.o"
 	@echo "... disk_op/disk_init.i"
 	@echo "... disk_op/disk_init.s"
+	@echo "... disk_op/inode_block.o"
+	@echo "... disk_op/inode_block.i"
+	@echo "... disk_op/inode_block.s"
 	@echo "... disk_op/volume.o"
 	@echo "... disk_op/volume.i"
 	@echo "... disk_op/volume.s"

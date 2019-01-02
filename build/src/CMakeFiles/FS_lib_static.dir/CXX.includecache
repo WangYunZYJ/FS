@@ -18,7 +18,15 @@ vector
 tiff.h
 -
 
+..//include/disk_op/inode_block.h
+tiff.h
+-
+include/constant/constants.h
+-
+
 ..//include/disk_op/volume.h
+include/inode/inode.h
+-
 memory
 -
 tiff.h
@@ -32,6 +40,8 @@ time.h
 string
 -
 tiff.h
+-
+include/constant/constants.h
 -
 
 ..//include/io/io.h
@@ -60,18 +70,30 @@ io.h
 fstream
 -
 
+/home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp
+include/disk_op/inode_block.h
+-
+cstring
+-
+
 /home/wy/CLionProjects/FS/src/disk_op/volume.cpp
 include/disk_op/volume.h
 -
 include/constant/constants.h
 -
+include/disk_op/inode_block.h
+-
 fstream
+-
+cstring
 -
 include/io/io.h
 -
 iostream
 -
-assert.h
+cassert
+-
+cmath
 -
 
 /home/wy/CLionProjects/FS/src/inode/inode.cpp

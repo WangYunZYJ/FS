@@ -105,9 +105,33 @@ src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o.provides: src/CMakeFile
 src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o.provides.build: src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o
 
 
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o: src/CMakeFiles/FS_lib_shared.dir/flags.make
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o: ../src/disk_op/inode_block.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o -c /home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp
+
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.i"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp > CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.i
+
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.s"
+	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp -o CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.s
+
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o.requires
+
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o.provides: src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o.provides.build
+.PHONY : src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o.provides
+
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o.provides.build: src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o
+
+
 src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o: src/CMakeFiles/FS_lib_shared.dir/flags.make
 src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o: ../src/disk_op/volume.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o"
 	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o -c /home/wy/CLionProjects/FS/src/disk_op/volume.cpp
 
 src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.i: cmake_force
@@ -131,7 +155,7 @@ src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o: src/CMakeFiles/FS_lib_shared.dir/flags.make
 src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o: ../src/inode/inode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o"
 	cd /home/wy/CLionProjects/FS/build/src && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o -c /home/wy/CLionProjects/FS/src/inode/inode.cpp
 
 src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.i: cmake_force
@@ -157,6 +181,7 @@ src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o.provides.build: src/CMakeFile
 FS_lib_shared_OBJECTS = \
 "CMakeFiles/FS_lib_shared.dir/io/io.cpp.o" \
 "CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o" \
+"CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o" \
 "CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o" \
 "CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o"
 
@@ -165,11 +190,12 @@ FS_lib_shared_EXTERNAL_OBJECTS =
 
 lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o
 lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o
+lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o
 lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o
 lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o
 lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/build.make
 lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library ../lib/libwyfs.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/CLionProjects/FS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library ../lib/libwyfs.so"
 	cd /home/wy/CLionProjects/FS/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FS_lib_shared.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/wy/CLionProjects/FS/build/src && $(CMAKE_COMMAND) -E cmake_symlink_library ../lib/libwyfs.so.1.2 ../lib/libwyfs.so.1 ../lib/libwyfs.so
 
@@ -186,6 +212,7 @@ src/CMakeFiles/FS_lib_shared.dir/build: lib/libwyfs.so
 
 src/CMakeFiles/FS_lib_shared.dir/requires: src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o.requires
 src/CMakeFiles/FS_lib_shared.dir/requires: src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o.requires
+src/CMakeFiles/FS_lib_shared.dir/requires: src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o.requires
 src/CMakeFiles/FS_lib_shared.dir/requires: src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o.requires
 src/CMakeFiles/FS_lib_shared.dir/requires: src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o.requires
 

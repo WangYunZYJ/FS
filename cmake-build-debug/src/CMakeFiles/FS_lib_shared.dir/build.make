@@ -70,9 +70,22 @@ src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.s"
 	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/src/disk_op/disk_init.cpp -o CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.s
 
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o: src/CMakeFiles/FS_lib_shared.dir/flags.make
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o: ../src/disk_op/inode_block.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o"
+	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o -c /home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp
+
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.i"
+	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp > CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.i
+
+src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.s"
+	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp -o CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.s
+
 src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o: src/CMakeFiles/FS_lib_shared.dir/flags.make
 src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o: ../src/disk_op/volume.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o"
 	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o -c /home/wy/CLionProjects/FS/src/disk_op/volume.cpp
 
 src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.i: cmake_force
@@ -85,7 +98,7 @@ src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.s: cmake_force
 
 src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o: src/CMakeFiles/FS_lib_shared.dir/flags.make
 src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o: ../src/inode/inode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o"
 	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o -c /home/wy/CLionProjects/FS/src/inode/inode.cpp
 
 src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.i: cmake_force
@@ -98,7 +111,7 @@ src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.s: cmake_force
 
 src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o: src/CMakeFiles/FS_lib_shared.dir/flags.make
 src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o: ../src/io/io.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o"
 	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FS_lib_shared.dir/io/io.cpp.o -c /home/wy/CLionProjects/FS/src/io/io.cpp
 
 src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.i: cmake_force
@@ -112,6 +125,7 @@ src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.s: cmake_force
 # Object files for target FS_lib_shared
 FS_lib_shared_OBJECTS = \
 "CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o" \
+"CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o" \
 "CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o" \
 "CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o" \
 "CMakeFiles/FS_lib_shared.dir/io/io.cpp.o"
@@ -120,12 +134,13 @@ FS_lib_shared_OBJECTS = \
 FS_lib_shared_EXTERNAL_OBJECTS =
 
 ../build/lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o
+../build/lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o
 ../build/lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o
 ../build/lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o
 ../build/lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/io/io.cpp.o
 ../build/lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/build.make
 ../build/lib/libwyfs.so.1.2: src/CMakeFiles/FS_lib_shared.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library ../../build/lib/libwyfs.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wy/CLionProjects/FS/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library ../../build/lib/libwyfs.so"
 	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FS_lib_shared.dir/link.txt --verbose=$(VERBOSE)
 	cd /home/wy/CLionProjects/FS/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_symlink_library ../../build/lib/libwyfs.so.1.2 ../../build/lib/libwyfs.so.1 ../../build/lib/libwyfs.so
 

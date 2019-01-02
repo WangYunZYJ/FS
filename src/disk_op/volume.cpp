@@ -1,13 +1,17 @@
-//
-// Created by wy on 19-1-1.
-//
-
+/**
+ * @author wy
+ * @date 19-1-1
+ */
+#define DEBUG
 #include <include/disk_op/volume.h>
 #include <include/constant/constants.h>
+#include <include/disk_op/inode_block.h>
 #include <fstream>
+#include <cstring>
 #include <include/io/io.h>
 #include <iostream>
-#include <assert.h>
+#include <cassert>
+#include <cmath>
 
 using namespace wyfs;
 
@@ -32,7 +36,7 @@ void wyfs::volume::create_disk() {
     file.close();
 }
 
-void wyfs::volume::init(const uint32 block_id) {
+void wyfs::volume::init_link_disk(const uint32 block_id) {
     auto _ = io::get_instance();
     uint32 pos = block_id * BLOCK_SIZE;
     uint32 stack_size = min(MAX_FREE_BLOCK_COUNT - block_id, FREE_BLOCK_MAX_COUNT_EACH_STACK);
@@ -46,7 +50,7 @@ void wyfs::volume::init(const uint32 block_id) {
     }
 
     if(block_id + stack_size < MAX_FREE_BLOCK_COUNT)
-        init(block_id + stack_size);
+        init_link_disk(block_id + stack_size);
 }
 
 void wyfs::volume::disk_init_read_test(const uint32 block_id) {
@@ -118,8 +122,8 @@ const uint32 volume::release_free_block(uint32 blk) {
         stack_size++;
         _->seekp(FREE_BLOCK_BEGIN * BLOCK_SIZE);
         _->write(reinterpret_cast<char*>(&stack_size), sizeof(uint32));
-        pos+= sizeof(uint32);
-    }else{
+        pos += sizeof(uint32);
+    }else {
         uint32 new_block_pos = blk * BLOCK_SIZE;
         pos = FREE_BLOCK_BEGIN * BLOCK_SIZE;
         _->seekp(new_block_pos);
@@ -184,4 +188,144 @@ void volume::apply_error_occurs(vector<uint32> &applied_blocks, uint32 &stack_si
     for(uint32 i = 0; i < applied_blocks.size(); ++i)
         stack_size = release_free_block(applied_blocks[applied_blocks.size() - 1 - i]);
     applied_blocks.clear();
+}
+
+/**
+ * 用户创建文件
+ * @param owner
+ * @param group
+ * @param fileMode
+ * @param fileSize
+ */
+//uint32 file_mode;
+//FilePermision file_permision;
+//char owner[14 * 8];
+//time_t timestamp;
+//uint32 file_size;
+//uint32 dirct_block[10];
+//uint32 first_block;
+//uint32 second_block;
+//uint32 third_block;
+//uint32 block_count;
+//uint32 group;
+//uint32 inode_block;
+void volume::create_file(char *owner, uint32 group, FileMode fileMode, uint32 fileSize, FilePermision filePermision) {
+    inode_block inodeBlock;
+    auto _ = io::get_instance();
+    uint32 inode_block_pos = INODE_TABLE * BLOCK_SIZE;
+    _->seekg(inode_block_pos);
+    _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+    while(inodeBlock.inode_size == INODE_COUNT_PER_BLOCK){
+        inode_block_pos = inodeBlock.next * BLOCK_SIZE;
+        _->seekg(inode_block_pos);
+        _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+    }
+    /**
+     * @param inodeBlock 存在空闲位置的inode表，inode表以链式结构进行管理
+     */
+    inode new_inode;
+    fill_inode_structure(new_inode, owner, group, fileMode, fileSize, filePermision);
+    //将inode地址写入inodeBlock
+    inodeBlock.ids[inodeBlock.inode_size] = new_inode.inode_id;
+    inodeBlock.inode_size++;
+    _->seekp(inode_block_pos);
+    _->write(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+}
+
+/**
+ * 初始化一个inode，并分配对应文件所需的block,并在磁盘写入inode
+ * @param new_inode
+ * @param owner
+ * @param group
+ * @param fileMode
+ * @param fileSize
+ * @param filePermision
+ */
+void volume::fill_inode_structure(inode &new_inode, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
+                                  FilePermision filePermision) {
+    /**
+     * @param inode_msg_block 存储当前inode所有信息的地址
+     */
+    auto inode_msg_block = apply_for_free_block(1);
+    new_inode.inode_id = inode_msg_block[0];
+    new_inode.group = group;
+    new_inode.file_size = fileSize;
+    strcpy(new_inode.owner, owner);
+    new_inode.file_permision = filePermision;
+    new_inode.timestamp = time(nullptr);
+    new_inode.file_mode = fileMode;
+    new_inode.block_count = (uint32)ceil(fileSize * 1.0 / BLOCK_SIZE);
+
+    alloc_blocks_for_inode(new_inode);
+
+    auto _ = io::get_instance();
+    _->seekp(new_inode.inode_id * BLOCK_SIZE);
+    _->write(reinterpret_cast<char*>(&new_inode), sizeof(inode));
+}
+
+void volume::alloc_blocks_for_inode(inode &new_inode) {
+    if(!new_inode.block_count) return;
+    auto _ = io::get_instance();
+    auto applied_blocks = apply_for_free_block(new_inode.block_count);
+    if(new_inode.block_count <= INODE_DIRECT_BLOCK_COUNT){
+        for(size_t i = 0; i < applied_blocks.size(); ++i){
+            new_inode.dirct_block[i] = applied_blocks[i];
+        }
+    }
+    else if(new_inode.block_count > INODE_DIRECT_BLOCK_COUNT && new_inode.block_count <= INODE_SECOND_BLOCK_COUNT){
+        auto applied_first_block = apply_for_free_block(1);
+        new_inode.first_block = applied_first_block[0];
+        _->seekp(BLOCK_SIZE * applied_first_block[0]);
+        for(size_t i = 0; i < applied_blocks.size(); ++i){
+            _->write(reinterpret_cast<char*>(&applied_blocks[i]), sizeof(uint32));
+        }
+    }
+    else{
+        auto applied_first_block = apply_for_free_block(1);
+        auto applied_second_block = apply_for_free_block((uint32)ceil(new_inode.block_count * 1.0 / INODE_SECOND_BLOCK_COUNT));
+        new_inode.second_block = applied_first_block[0];
+        _->seekp(BLOCK_SIZE * applied_first_block[0]);
+
+        for(size_t i = 0; i < applied_second_block.size(); ++i){
+            _->write(reinterpret_cast<char*>(&applied_second_block[i]), sizeof(uint32));
+        }
+        size_t index = 0;
+        for(size_t i = 0; i < applied_second_block.size(); ++i){
+            _->seekp(BLOCK_SIZE * applied_second_block[i]);
+            for(size_t j = 0;index < applied_blocks.size()&&j<INODE_SECOND_BLOCK_COUNT; ++index, ++j){
+                _->write(reinterpret_cast<char*>(applied_blocks[index]), sizeof(uint32));
+            }
+        }
+    }
+}
+
+void volume::init_inode_table() {
+    inode_block inodeBlock;
+    inodeBlock.inode_size = 0;
+    inodeBlock.next = 0;
+    auto _ = io::get_instance();
+    _->seekp(BLOCK_SIZE * INODE_TABLE);
+    _->write(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+}
+
+void volume::disk_init() {
+    init_inode_table();
+    init_link_disk(FREE_BLOCK_BEGIN);
+}
+
+void volume::inode_msg_test() {
+    auto _ = io::get_instance();
+    _->seekg(BLOCK_SIZE * INODE_TABLE);
+    inode_block inodeBlock;
+    _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+    printf("当前inode表的大小为%d, 下一张inode表地址为%d\n", inodeBlock.inode_size, inodeBlock.next);
+    printf("当前inode表中各inode地址如下：\n");
+    for(size_t i = 0; i < inodeBlock.inode_size; ++i){
+        printf("第%4d各inode其坐标为%8d\n", i, inodeBlock.ids[i]);
+        puts("");
+        _->seekg(BLOCK_SIZE * inodeBlock.ids[i]);
+        inode tmp_inode;
+        _->read(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
+        tmp_inode.print_test();
+    }
 }

@@ -6,11 +6,18 @@ src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o: ../include/disk_op/dis
 src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o: ../include/io/io.h
 src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o: ../src/disk_op/disk_init.cpp
 
+src/CMakeFiles/FS_lib_static.dir/disk_op/inode_block.cpp.o: ../include/constant/constants.h
+src/CMakeFiles/FS_lib_static.dir/disk_op/inode_block.cpp.o: ../include/disk_op/inode_block.h
+src/CMakeFiles/FS_lib_static.dir/disk_op/inode_block.cpp.o: ../src/disk_op/inode_block.cpp
+
 src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o: ../include/constant/constants.h
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o: ../include/disk_op/inode_block.h
 src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o: ../include/disk_op/volume.h
+src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o: ../include/inode/inode.h
 src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o: ../include/io/io.h
 src/CMakeFiles/FS_lib_static.dir/disk_op/volume.cpp.o: ../src/disk_op/volume.cpp
 
+src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o: ../include/constant/constants.h
 src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o: ../include/inode/inode.h
 src/CMakeFiles/FS_lib_static.dir/inode/inode.cpp.o: ../src/inode/inode.cpp
 

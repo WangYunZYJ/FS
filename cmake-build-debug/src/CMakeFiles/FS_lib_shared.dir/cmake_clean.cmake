@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o"
+  "CMakeFiles/FS_lib_shared.dir/disk_op/inode_block.cpp.o"
   "CMakeFiles/FS_lib_shared.dir/disk_op/volume.cpp.o"
   "CMakeFiles/FS_lib_shared.dir/inode/inode.cpp.o"
   "CMakeFiles/FS_lib_shared.dir/io/io.cpp.o"
