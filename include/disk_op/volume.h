@@ -10,6 +10,7 @@
 #include <memory>
 #include <tiff.h>
 #include <vector>
+#include "file_msg.h"
 
 using namespace std;
 namespace wyfs
@@ -133,11 +134,34 @@ namespace wyfs
         void create_file(char* owner, uint32 group, FileMode fileMode = FileMode::NORMAL_FILE, uint32 fileSize = 0, FilePermision filePermision = {7, 7, 5});
 
         /**
-         * add by wy on 19-1-2 20:00
+         * added by wy on 19-1-2 20:00
          * 添加文件后对磁盘信息正确性的检验
          */
         void inode_msg_test();
 
+        /**
+         * added by wy on 19-1-2 22:00
+         * 返回inode节点对应文件的信息
+         * @param _inode 某个inode节点
+         * @return 文件数据
+         */
+        vector<file_msg> read_file_msg(const inode& _inode);
+
+        /**
+         * TODO
+         * added by wy on 19-1-2 22:00
+         * @param path 文件路径
+         * @return 文件数据
+         */
+        vector<file_msg> read_file_msg(char* path);
+
+        /**
+         * added by wy on 19-1-2 23:00
+         * 将file_msg装配成真正的文件信息并返回
+         * @param file
+         * @return 返回文件的字符串
+         */
+        const string decode_file_msg(const vector<file_msg>& file);
     };
 }
 

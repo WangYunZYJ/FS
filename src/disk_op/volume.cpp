@@ -329,3 +329,59 @@ void volume::inode_msg_test() {
         tmp_inode.print_test();
     }
 }
+
+vector<file_msg> volume::read_file_msg(const inode &_inode) {
+    vector<file_msg> file;
+    auto _ = io::get_instance();
+    if(_inode.block_count <= INODE_DIRECT_BLOCK_COUNT){
+        for(size_t i = 0; i < _inode.block_count; ++i) {
+            _->seekg(_inode.dirct_block[i] * BLOCK_SIZE);
+            file_msg tmp_msg;
+            _->read(reinterpret_cast<char*>(&tmp_msg), sizeof(file_msg));
+            file.push_back(tmp_msg);
+        }
+    }
+    else if(_inode.block_count > INODE_DIRECT_BLOCK_COUNT && _inode.block_count <= INODE_SECOND_BLOCK_COUNT) {
+        //uint32 first_addr_size = static_cast<uint32 >(ceil(_inode.block_count * 1.0 / INODE_SECOND_BLOCK_COUNT));
+        _->seekg(_inode.first_block * BLOCK_SIZE);
+        vector<uint32> block_addrs;
+        for(size_t i = 0; i < _inode.block_count; ++i) {
+            uint32 block_addr;
+            _->read(reinterpret_cast<char*>(&block_addr), sizeof(uint32));
+            block_addrs.push_back(block_addr);
+        }
+        for(size_t i = 0; i < block_addrs.size(); ++i) {
+            file_msg tmp_msg;
+            _->seekg(block_addrs[i]);
+            _->read(reinterpret_cast<char*>(&tmp_msg), sizeof(file_msg));
+            file.push_back(tmp_msg);
+        }
+    }
+    else {
+        uint32 first_addr_size = static_cast<uint32 >(ceil(_inode.block_count * 1.0 / INODE_SECOND_BLOCK_COUNT));
+        _->seekg(_inode.second_block * BLOCK_SIZE);
+        vector<uint32> second_cache_addr;
+        for(size_t i = 0; i < first_addr_size; i++){
+            uint32 second_addr;
+            _->read(reinterpret_cast<char*>(&second_addr), sizeof(uint32));
+            second_cache_addr.push_back(second_addr);
+        }
+        vector<uint32> final_addrs;
+        for (size_t i = 0, count = 0, per_count = 0; i < second_cache_addr.size() && count < _inode.block_count; ++i) {
+            per_count = 0;
+            _->seekg(second_cache_addr[i] * BLOCK_SIZE);
+            while (count < _inode.block_count && per_count < INODE_SECOND_BLOCK_COUNT){
+                uint32 final_block_addr;
+                _->read(reinterpret_cast<char*>(&final_block_addr), sizeof(uint32));
+                final_addrs.push_back(final_block_addr);
+            }
+        }
+        for (size_t i = 0; i < final_addrs.size(); ++i) {
+            file_msg tmp_msg;
+            _->seekg(final_addrs[i] * BLOCK_SIZE);
+            _->read(reinterpret_cast<char*>(&tmp_msg), sizeof(file_msg));
+            file.push_back(tmp_msg);
+        }
+    }
+    return file;
+}

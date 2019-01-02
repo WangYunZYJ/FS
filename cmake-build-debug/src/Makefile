@@ -216,6 +216,36 @@ disk_op/disk_init.cpp.s:
 	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.s
 .PHONY : disk_op/disk_init.cpp.s
 
+disk_op/file_msg.o: disk_op/file_msg.cpp.o
+
+.PHONY : disk_op/file_msg.o
+
+# target to build an object file
+disk_op/file_msg.cpp.o:
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/file_msg.cpp.o
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/file_msg.cpp.o
+.PHONY : disk_op/file_msg.cpp.o
+
+disk_op/file_msg.i: disk_op/file_msg.cpp.i
+
+.PHONY : disk_op/file_msg.i
+
+# target to preprocess a source file
+disk_op/file_msg.cpp.i:
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/file_msg.cpp.i
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/file_msg.cpp.i
+.PHONY : disk_op/file_msg.cpp.i
+
+disk_op/file_msg.s: disk_op/file_msg.cpp.s
+
+.PHONY : disk_op/file_msg.s
+
+# target to generate assembly for a file
+disk_op/file_msg.cpp.s:
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/file_msg.cpp.s
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/file_msg.cpp.s
+.PHONY : disk_op/file_msg.cpp.s
+
 disk_op/inode_block.o: disk_op/inode_block.cpp.o
 
 .PHONY : disk_op/inode_block.o
@@ -353,6 +383,9 @@ help:
 	@echo "... disk_op/disk_init.o"
 	@echo "... disk_op/disk_init.i"
 	@echo "... disk_op/disk_init.s"
+	@echo "... disk_op/file_msg.o"
+	@echo "... disk_op/file_msg.i"
+	@echo "... disk_op/file_msg.s"
 	@echo "... disk_op/inode_block.o"
 	@echo "... disk_op/inode_block.i"
 	@echo "... disk_op/inode_block.s"
