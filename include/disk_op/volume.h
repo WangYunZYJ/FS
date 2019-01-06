@@ -8,9 +8,10 @@
 
 #include <include/inode/inode.h>
 #include <memory>
+#include <algorithm>
 #include <tiff.h>
 #include <vector>
-#include "file_msg.h"
+#include <include/disk_op/data_structs.h>
 
 using namespace std;
 namespace wyfs
@@ -78,6 +79,11 @@ namespace wyfs
          */
         void init_link_disk(const uint32 block_id);
 
+        /**
+         * added by wy on 19-1-3 20:30
+         */
+        void init_root_menu();
+
     public:
 
         /**
@@ -131,7 +137,23 @@ namespace wyfs
          * @param fileSize 文件大小
          * @param filePermision 文件权限
          */
-        void create_file(char* owner, uint32 group, FileMode fileMode = FileMode::NORMAL_FILE, uint32 fileSize = 0, FilePermision filePermision = {7, 7, 5});
+        void create_file(char *file_name, char *owner, uint32 group, FileMode fileMode = FileMode::NORMAL_FILE,
+                         uint32 fileSize = 0, FilePermision filePermision = {7, 7, 5});
+
+        /**
+         * added by wy on 19-1-3 20:30
+         * @param owner 文件所有者
+         * @param group 文件所属组
+         * @param fileSize 文件大小
+         * @param filePermision 文件权限
+         */
+        void create_menu_file(char *owner, uint32 group, uint32 fileSize = 0, FilePermision filePermision = {7, 7, 5});
+
+        /**
+         * added by wy on 19-1-3 20:30
+         * 增加用户后对磁盘的操作
+         */
+        void add_user_table();
 
         /**
          * added by wy on 19-1-2 20:00
@@ -162,6 +184,8 @@ namespace wyfs
          * @return 返回文件的字符串
          */
         const string decode_file_msg(const vector<file_msg>& file);
+
+
     };
 }
 

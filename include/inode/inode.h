@@ -30,7 +30,7 @@ namespace wyfs
     {
         uint32 file_mode;
         FilePermision file_permision;
-        char owner[14 * 8];
+        char owner[14];
         time_t timestamp;
         uint32 file_size;
         uint32 dirct_block[INODE_DIRECT_BLOCK_COUNT];

@@ -5,7 +5,6 @@
 #define DEBUG
 #include <include/disk_op/volume.h>
 #include <include/constant/constants.h>
-#include <include/disk_op/inode_block.h>
 #include <fstream>
 #include <cstring>
 #include <include/io/io.h>
@@ -196,6 +195,8 @@ void volume::apply_error_occurs(vector<uint32> &applied_blocks, uint32 &stack_si
  * @param group
  * @param fileMode
  * @param fileSize
+ * TODO DEBUG
+ * @bug inode_block结构提格式不对
  */
 //uint32 file_mode;
 //FilePermision file_permision;
@@ -209,7 +210,8 @@ void volume::apply_error_occurs(vector<uint32> &applied_blocks, uint32 &stack_si
 //uint32 block_count;
 //uint32 group;
 //uint32 inode_block;
-void volume::create_file(char *owner, uint32 group, FileMode fileMode, uint32 fileSize, FilePermision filePermision) {
+void volume::create_file(char *file_name, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
+                         FilePermision filePermision) {
     inode_block inodeBlock;
     auto _ = io::get_instance();
     uint32 inode_block_pos = INODE_TABLE * BLOCK_SIZE;
@@ -385,3 +387,39 @@ vector<file_msg> volume::read_file_msg(const inode &_inode) {
     }
     return file;
 }
+
+vector<file_msg> volume::read_file_msg(char *path) {
+    /**
+     * 根据文件路径来获取文件内容。
+     * TODO
+     */
+    return vector<file_msg>();
+}
+
+const string volume::decode_file_msg(const vector<file_msg> &file) {
+    std::__cxx11::string file_content = "";
+    for_each(file.begin(), file.end(), [&](file_msg msg){
+        for(size_t i = 0; i < msg.msg_length; ++i){
+            file_content += msg.byte[i];
+        }
+    });
+    return file_content;
+}
+
+/**
+ * implemented by wy on 19-1-3
+ */
+void volume::create_menu_file(char *owner, uint32 group, uint32 fileSize, FilePermision filePermision) {
+
+}
+
+/**
+ * 根目录0块
+ * 包含信息如下
+ * 0. 用户名
+ * 1. 用户文件inode号
+ */
+void volume::init_root_menu() {
+
+}
+
