@@ -194,6 +194,9 @@ namespace wyfs
 
         void add_user_pwd(string username, string pwd);
 
+        vector<uint32> get_sons_inode_addr(const vector<uint32> &inode_path);
+
+        bool is_normal_file(uint32 inode_addr);
     };
 }
 

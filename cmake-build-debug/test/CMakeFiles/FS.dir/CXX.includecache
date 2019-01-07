@@ -12,14 +12,24 @@ string
 tiff.h
 -
 
+..//include/disk_op/data_structs.h
+tiff.h
+-
+include/constant/constants.h
+-
+
 ..//include/disk_op/volume.h
 include/inode/inode.h
 -
 memory
 -
+algorithm
+-
 tiff.h
 -
 vector
+-
+include/disk_op/data_structs.h
 -
 
 ..//include/inode/inode.h
@@ -478,12 +488,6 @@ string
 tiff.h
 -
 
-../include/disk_op/disk_init.h
-vector
--
-tiff.h
--
-
 ../include/io/io.h
 memory
 -
@@ -491,12 +495,14 @@ fstream
 -
 
 /home/wy/CLionProjects/FS/test/disk_op/disk_init_test.cpp
+
+/home/wy/CLionProjects/FS/test/test.cpp
+catch.h
+/home/wy/CLionProjects/FS/test/catch.h
+constants.h
+/home/wy/CLionProjects/FS/test/constants.h
 include/disk_op/volume.h
 -
-disk_init.h
-/home/wy/CLionProjects/FS/test/disk_op/disk_init.h
-catch.h
-/home/wy/CLionProjects/FS/test/disk_op/catch.h
-constant/constants.h
-/home/wy/CLionProjects/FS/test/disk_op/constant/constants.h
+iostream
+-
 

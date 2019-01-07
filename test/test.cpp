@@ -5,6 +5,12 @@
 #include <iostream>
 using namespace std;
 
+TEST_CASE("init_disk", "[init]")
+{
+    auto _volume = wyfs::volume::get_instance();
+    _volume->disk_init();
+}
+
 TEST_CASE("touch", "[touch]")
 {
     auto _volume = wyfs::volume::get_instance();

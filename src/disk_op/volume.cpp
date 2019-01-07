@@ -421,7 +421,7 @@ void volume::init_root_block() {
     tree_list treeList;
     treeList.sons_size = 0;
     auto _ = io::get_instance();
-    _->seekp(ROOT_BLOCK * BLOCK_SIZE);
+    _->seekp(TREE_STRUCT * BLOCK_SIZE);
     _->write(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
 }
 
@@ -478,4 +478,41 @@ void volume::add_user_pwd(string username, string pwd) {
     strcpy(usernamePassword.users[usernamePassword.user_counts].password, pwd.c_str());
     _->seekp(USERNAME_PASSWORD * BLOCK_SIZE);
     _->write(reinterpret_cast<char*>(&usernamePassword), sizeof(username_password));
+}
+
+vector<uint32> volume::get_sons_inode_addr(const vector<uint32> &inode_path) {
+    vector<uint32> sons_inode_addr;
+    auto _ = io::get_instance();
+    tree_list treeList;
+    _->seekg(TREE_STRUCT * BLOCK_SIZE);
+    _->read(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
+    if(inode_path.size() == 1){
+        for(size_t i = 0; i < treeList.sons_size; ++i) {
+            sons_inode_addr.push_back(treeList.sons_inode_addr[i]);
+        }
+    }else{
+        inode curr_dir_inode;
+        _->seekg(BLOCK_SIZE * inode_path[inode_path.size() - 1]);
+        _->read(reinterpret_cast<char*>(&curr_dir_inode), sizeof(inode));
+        if(curr_dir_inode.block_count == 0){
+            sons_inode_addr.clear();
+            return sons_inode_addr;
+        }
+        _->seekg(BLOCK_SIZE * curr_dir_inode.dirct_block[0]);
+        _->read(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
+        for(size_t i = 0; i < treeList.sons_size; ++i) {
+            sons_inode_addr.push_back(treeList.sons_inode_addr[i]);
+        }
+    }
+    return sons_inode_addr;
+}
+
+bool volume::is_normal_file(uint32 inode_addr) {
+    auto _ = io::get_instance();
+    inode file_inode;
+    _->seekg(inode_addr * BLOCK_SIZE);
+    _->read(reinterpret_cast<char*>(&file_inode), sizeof(inode));
+    if(file_inode.file_mode == FileMode::NORMAL_FILE)
+        return true;
+    return false;
 }

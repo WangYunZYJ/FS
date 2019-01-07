@@ -18,11 +18,21 @@ namespace wyfs{
     static char owner[NAME_SIZE];
     uint32 group;
 
+    std::vector<uint32> split_path_string(std::string path);
+
+    std::string union_uint2path(const std::vector<uint32>& pathVec);
+
+    void print_curr_path();
+
     void touch();
 
     void useradd();
 
     void mkdir();
+
+    void cd();
+
+    void ls();
 }
 
 #endif //FS_COMMANDS_H
