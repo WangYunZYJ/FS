@@ -11,6 +11,7 @@
 #include <iostream>
 #include <cassert>
 #include <cmath>
+#include <include/cache/commands.h>
 
 using namespace wyfs;
 
@@ -198,40 +199,47 @@ void volume::apply_error_occurs(vector<uint32> &applied_blocks, uint32 &stack_si
  * TODO DEBUG
  * @bug inode_block结构提格式不对
  */
-//uint32 file_mode;
-//FilePermision file_permision;
-//char owner[14 * 8];
-//time_t timestamp;
-//uint32 file_size;
-//uint32 dirct_block[10];
-//uint32 first_block;
-//uint32 second_block;
-//uint32 third_block;
-//uint32 block_count;
-//uint32 group;
-//uint32 inode_block;
-void volume::create_file(char *file_name, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
-                         FilePermision filePermision) {
-    inode_block inodeBlock;
+
+uint32 volume::create_file(char *file_name, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
+                           FilePermision filePermision) {
+    username_saved_as_menu inodeBlock;
     auto _ = io::get_instance();
     uint32 inode_block_pos = INODE_TABLE * BLOCK_SIZE;
     _->seekg(inode_block_pos);
-    _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
-    while(inodeBlock.inode_size == INODE_COUNT_PER_BLOCK){
-        inode_block_pos = inodeBlock.next * BLOCK_SIZE;
+    _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(username_saved_as_menu));
+    while(inodeBlock.name_counts == INODE_COUNT_PER_BLOCK){
+        if(inodeBlock.next_menu_block_addr == 0){
+            auto blks = apply_for_free_block(1);
+            inodeBlock.next_menu_block_addr = blks[0];
+            username_saved_as_menu tmp;
+            tmp.name_counts = 0;
+            _->seekp(BLOCK_SIZE * blks[0]);
+            _->write(reinterpret_cast<char*>(&tmp), sizeof(username_saved_as_menu));
+        }
+        inode_block_pos = inodeBlock.next_menu_block_addr * BLOCK_SIZE;
         _->seekg(inode_block_pos);
-        _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+        _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(username_saved_as_menu));
     }
     /**
      * @param inodeBlock 存在空闲位置的inode表，inode表以链式结构进行管理
      */
     inode new_inode;
-    fill_inode_structure(new_inode, owner, group, fileMode, fileSize, filePermision);
+    uint32 inode_addr = fill_inode_structure(new_inode, owner, group, fileMode, fileSize, filePermision);
     //将inode地址写入inodeBlock
-    inodeBlock.ids[inodeBlock.inode_size] = new_inode.inode_id;
-    inodeBlock.inode_size++;
+    inodeBlock.fiaddr[inodeBlock.name_counts].inode_addr = new_inode.inode_id;
+    strcpy(inodeBlock.fiaddr[inodeBlock.name_counts].filename, file_name);
+    inodeBlock.name_counts++;
+
     _->seekp(inode_block_pos);
-    _->write(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+    _->write(reinterpret_cast<char*>(&inodeBlock), sizeof(username_saved_as_menu));
+    return inode_addr;
+}
+
+void volume::init_cache() {
+    wyfs::file_name2id["/"] = 0;
+    wyfs::file_id2name[0] = "/";
+    group = 0;
+    strcpy(owner, "\0");
 }
 
 /**
@@ -243,8 +251,8 @@ void volume::create_file(char *file_name, char *owner, uint32 group, FileMode fi
  * @param fileSize
  * @param filePermision
  */
-void volume::fill_inode_structure(inode &new_inode, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
-                                  FilePermision filePermision) {
+uint32 volume::fill_inode_structure(inode &new_inode, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
+                                    FilePermision filePermision) {
     /**
      * @param inode_msg_block 存储当前inode所有信息的地址
      */
@@ -263,6 +271,7 @@ void volume::fill_inode_structure(inode &new_inode, char *owner, uint32 group, F
     auto _ = io::get_instance();
     _->seekp(new_inode.inode_id * BLOCK_SIZE);
     _->write(reinterpret_cast<char*>(&new_inode), sizeof(inode));
+    return inode_msg_block[0];
 }
 
 void volume::alloc_blocks_for_inode(inode &new_inode) {
@@ -302,35 +311,37 @@ void volume::alloc_blocks_for_inode(inode &new_inode) {
 }
 
 void volume::init_inode_table() {
-    inode_block inodeBlock;
-    inodeBlock.inode_size = 0;
-    inodeBlock.next = 0;
+    username_saved_as_menu inodeBlock;
+//    inode_block inodeBlock;
+    inodeBlock.name_counts = 0;
+    inodeBlock.next_menu_block_addr = 0;
     auto _ = io::get_instance();
     _->seekp(BLOCK_SIZE * INODE_TABLE);
-    _->write(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+    _->write(reinterpret_cast<char*>(&inodeBlock), sizeof(username_saved_as_menu));
 }
 
 void volume::disk_init() {
+    init_root_block();
     init_inode_table();
     init_link_disk(FREE_BLOCK_BEGIN);
 }
 
-void volume::inode_msg_test() {
-    auto _ = io::get_instance();
-    _->seekg(BLOCK_SIZE * INODE_TABLE);
-    inode_block inodeBlock;
-    _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
-    printf("当前inode表的大小为%d, 下一张inode表地址为%d\n", inodeBlock.inode_size, inodeBlock.next);
-    printf("当前inode表中各inode地址如下：\n");
-    for(size_t i = 0; i < inodeBlock.inode_size; ++i){
-        printf("第%4d各inode其坐标为%8d\n", i, inodeBlock.ids[i]);
-        puts("");
-        _->seekg(BLOCK_SIZE * inodeBlock.ids[i]);
-        inode tmp_inode;
-        _->read(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
-        tmp_inode.print_test();
-    }
-}
+//void volume::inode_msg_test() {
+//    auto _ = io::get_instance();
+//    _->seekg(BLOCK_SIZE * INODE_TABLE);
+//    inode_block inodeBlock;
+//    _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(inode_block));
+//    printf("当前inode表的大小为%d, 下一张inode表地址为%d\n", inodeBlock.inode_size, inodeBlock.next);
+//    printf("当前inode表中各inode地址如下：\n");
+//    for(size_t i = 0; i < inodeBlock.inode_size; ++i){
+//        printf("第%4d各inode其坐标为%8d\n", i, inodeBlock.ids[i]);
+//        puts("");
+//        _->seekg(BLOCK_SIZE * inodeBlock.ids[i]);
+//        inode tmp_inode;
+//        _->read(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
+//        tmp_inode.print_test();
+//    }
+//}
 
 vector<file_msg> volume::read_file_msg(const inode &_inode) {
     vector<file_msg> file;
@@ -398,28 +409,73 @@ vector<file_msg> volume::read_file_msg(char *path) {
 
 const string volume::decode_file_msg(const vector<file_msg> &file) {
     std::__cxx11::string file_content = "";
-    for_each(file.begin(), file.end(), [&](file_msg msg){
-        for(size_t i = 0; i < msg.msg_length; ++i){
+    for_each(file.begin(), file.end(), [&](file_msg msg) {
+        for (size_t i = 0; i < msg.msg_length; ++i) {
             file_content += msg.byte[i];
         }
     });
     return file_content;
 }
 
-/**
- * implemented by wy on 19-1-3
- */
-void volume::create_menu_file(char *owner, uint32 group, uint32 fileSize, FilePermision filePermision) {
-
+void volume::init_root_block() {
+    tree_list treeList;
+    treeList.sons_size = 0;
+    auto _ = io::get_instance();
+    _->seekp(ROOT_BLOCK * BLOCK_SIZE);
+    _->write(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
 }
 
-/**
- * 根目录0块
- * 包含信息如下
- * 0. 用户名
- * 1. 用户文件inode号
- */
-void volume::init_root_menu() {
+void volume::update_tree_lists(uint32 father_inode_addr, uint32 son_inode_addr) {
 
+    if(!father_inode_addr){
+        auto _ = io::get_instance();
+        tree_list treeList;
+        _->seekg(father_inode_addr * BLOCK_SIZE);
+        _->read(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
+        treeList.sons_inode_addr[treeList.sons_size] = son_inode_addr;
+        treeList.sons_size ++;
+        _->seekp(father_inode_addr * BLOCK_SIZE);
+        _->write(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
+        return;
+    }
+
+    auto _ = io ::get_instance();
+    inode father_inode;
+    _->seekg(BLOCK_SIZE * father_inode_addr);
+    _->read(reinterpret_cast<char*>(&father_inode), sizeof(inode));
+    tree_list treeList;
+    if(father_inode.block_count == 1){
+        _->seekg(father_inode.dirct_block[0] * BLOCK_SIZE);
+        _->read(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
+    }else{
+        auto blocks = apply_for_free_block(1);
+        father_inode.block_count = 1;
+        father_inode.dirct_block[0] = blocks[0];
+    }
+    treeList.sons_inode_addr[treeList.sons_size] = son_inode_addr;
+    treeList.sons_size++;
+
+    _->seekp(BLOCK_SIZE * father_inode.dirct_block[0]);
+    _->write(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
+    _->seekp(BLOCK_SIZE * father_inode_addr);
+    _->write(reinterpret_cast<char*>(&father_inode), sizeof(inode));
 }
 
+void volume::init_username_password() {
+    auto _ = io::get_instance();
+    username_password usernamePassword;
+    usernamePassword.user_counts = 0;
+    _->seekp(USERNAME_PASSWORD * BLOCK_SIZE);
+    _->write(reinterpret_cast<char*>(&usernamePassword), sizeof(username_password));
+}
+
+void volume::add_user_pwd(string username, string pwd) {
+    auto _ = io::get_instance();
+    username_password usernamePassword;
+    _->seekg(USERNAME_PASSWORD * BLOCK_SIZE);
+    _->read(reinterpret_cast<char*>(&usernamePassword), sizeof(username_password));
+    strcpy(usernamePassword.users[usernamePassword.user_counts].username, username.c_str());
+    strcpy(usernamePassword.users[usernamePassword.user_counts].password, pwd.c_str());
+    _->seekp(USERNAME_PASSWORD * BLOCK_SIZE);
+    _->write(reinterpret_cast<char*>(&usernamePassword), sizeof(username_password));
+}

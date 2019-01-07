@@ -25,15 +25,31 @@ namespace wyfs
 //        inode_block() = default;
 //    };
 
+
     struct filename_and_inode_addr{
-        char username[NAME_SIZE];
+        char filename[NAME_SIZE];
         uint32 inode_addr;
     };
 
     struct username_saved_as_menu{
         uint32 name_counts;
-        filename_and_inode_addr fiaddr[28];  // 18字节
+        filename_and_inode_addr fiaddr[ID_NAME_COUNT_PER_BLOCK];  // 18字节
         uint32 next_menu_block_addr;
+    };
+
+    struct tree_list{
+        uint32 sons_size;
+        uint32 sons_inode_addr[MAX_SONS_COUNT];
+    };
+
+    struct username_pwd_in{
+        char password[NAME_SIZE];
+        char username[NAME_SIZE];
+    };
+
+    struct username_password{
+        uint32 user_counts;
+        username_pwd_in users[BLOCK_SIZE / sizeof(username_pwd_in)];//28B
     };
 }
 

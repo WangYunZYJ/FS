@@ -17,8 +17,11 @@ namespace wyfs
     const uint32 INODE_COUNT_PER_BLOCK = 122;
     const uint32 INODE_DIRECT_BLOCK_COUNT = 10;
     const uint32 INODE_SECOND_BLOCK_COUNT = 128;
+    const uint32 MAX_SONS_COUNT = 127;
     const uint32 NAME_SIZE = 14;
+    const uint32 ID_NAME_COUNT_PER_BLOCK = 28;
     const uint32 FREE_BLOCK_BEGIN = 4;
+    const uint32 USERNAME_PASSWORD = 2;
     const uint32 INODE_TABLE = 1;
     const uint32 ROOT_BLOCK = 0;
 }

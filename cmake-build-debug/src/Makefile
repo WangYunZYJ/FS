@@ -186,6 +186,36 @@ FS_lib_static/fast:
 	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/build
 .PHONY : FS_lib_static/fast
 
+cache/commands.o: cache/commands.cpp.o
+
+.PHONY : cache/commands.o
+
+# target to build an object file
+cache/commands.cpp.o:
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/cache/commands.cpp.o
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/cache/commands.cpp.o
+.PHONY : cache/commands.cpp.o
+
+cache/commands.i: cache/commands.cpp.i
+
+.PHONY : cache/commands.i
+
+# target to preprocess a source file
+cache/commands.cpp.i:
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/cache/commands.cpp.i
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/cache/commands.cpp.i
+.PHONY : cache/commands.cpp.i
+
+cache/commands.s: cache/commands.cpp.s
+
+.PHONY : cache/commands.s
+
+# target to generate assembly for a file
+cache/commands.cpp.s:
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/cache/commands.cpp.s
+	cd /home/wy/CLionProjects/FS/cmake-build-debug && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/cache/commands.cpp.s
+.PHONY : cache/commands.cpp.s
+
 disk_op/inode_block.o: disk_op/inode_block.cpp.o
 
 .PHONY : disk_op/inode_block.o
@@ -320,6 +350,9 @@ help:
 	@echo "... FS_lib_static"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cache/commands.o"
+	@echo "... cache/commands.i"
+	@echo "... cache/commands.s"
 	@echo "... disk_op/inode_block.o"
 	@echo "... disk_op/inode_block.i"
 	@echo "... disk_op/inode_block.s"

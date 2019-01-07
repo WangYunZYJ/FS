@@ -58,8 +58,8 @@ namespace wyfs
          * @param fileSize
          * @param filePermision
          */
-        void fill_inode_structure(inode &new_inode, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
-                                  FilePermision filePermision);
+        uint32 fill_inode_structure(inode &new_inode, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
+                                    FilePermision filePermision);
 
         /**
          * 分配inode对应文件所需的block,并将多级地址映射写入各级块。
@@ -79,10 +79,6 @@ namespace wyfs
          */
         void init_link_disk(const uint32 block_id);
 
-        /**
-         * added by wy on 19-1-3 20:30
-         */
-        void init_root_menu();
 
     public:
 
@@ -137,8 +133,8 @@ namespace wyfs
          * @param fileSize 文件大小
          * @param filePermision 文件权限
          */
-        void create_file(char *file_name, char *owner, uint32 group, FileMode fileMode = FileMode::NORMAL_FILE,
-                         uint32 fileSize = 0, FilePermision filePermision = {7, 7, 5});
+        uint32 create_file(char *file_name, char *owner, uint32 group, FileMode fileMode = FileMode::NORMAL_FILE,
+                           uint32 fileSize = 0, FilePermision filePermision = {7, 7, 5});
 
         /**
          * added by wy on 19-1-3 20:30
@@ -185,6 +181,18 @@ namespace wyfs
          */
         const string decode_file_msg(const vector<file_msg>& file);
 
+        /**
+         * 存储树形结构
+         */
+        void init_root_block();
+
+        void init_username_password();
+
+        void update_tree_lists(uint32 father_inode_addr, uint32 son_inode_addr);
+
+        void init_cache();
+
+        void add_user_pwd(string username, string pwd);
 
     };
 }
