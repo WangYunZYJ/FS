@@ -24,6 +24,7 @@ namespace wyfs
     const uint32 USERNAME_PASSWORD = 2;
     const uint32 INODE_TABLE = 1;
     const uint32 TREE_STRUCT = 0;
+    const uint32 WIDTH = 10;
 }
 
 #endif //FS_CONSTANTS_H

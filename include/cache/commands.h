@@ -16,7 +16,7 @@ namespace wyfs{
     static std::map<uint32, std::string> file_id2name;
     static std::map<std::string, std::string> name2pwd;
     static char owner[NAME_SIZE];
-    uint32 group;
+    static uint32 group;
 
     std::vector<uint32> split_path_string(std::string path);
 

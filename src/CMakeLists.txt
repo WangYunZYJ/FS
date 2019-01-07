@@ -1,6 +1,6 @@
 file(GLOB_RECURSE c_files "*.cpp")
  
-add_library(FS_lib_shared  SHARED ${c_files} io/io.cpp inode/inode.cpp disk_op/volume.cpp disk_op/inode_block.cpp cache/commands.cpp)
+add_library(FS_lib_shared  SHARED ${c_files} io/io.cpp inode/inode.cpp disk_op/volume.cpp cache/commands.cpp)
 add_library(FS_lib_static STATIC ${c_files})
 
 set_target_properties(FS_lib_shared PROPERTIES OUTPUT_NAME "wyfs")

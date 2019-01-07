@@ -53,7 +53,7 @@ std::string wyfs::union_uint2path(const std::vector<uint32> &pathVec) {
 
 void wyfs::print_curr_path() {
     string path = union_uint2path(curr_path);
-    cout << "\033[32m" << path;
+    cout << "\033[32m " << path;
 }
 
 void wyfs::touch() {
@@ -113,18 +113,19 @@ void wyfs::cd() {
 }
 
 void wyfs::ls() {
+    cout << "\033[32m" << setw(WIDTH) << ".";
+    cout << "\033[32m" << setw(WIDTH) << "..";
     auto _volume = volume::get_instance();
     vector<uint32> sons = _volume->get_sons_inode_addr(curr_path);
     uint32 index = 2;
-    cout << "\033[32" << setw(30) << ".";
-    cout << "\033[32" << setw(30) << "..";
     for(size_t i = 0; i < sons.size(); ++i) {
         index ++;
-        cout << "\033[32" << setw(30) << file_id2name[sons[i]];
+        cout << "\033[32m" << setw(WIDTH) << file_id2name[sons[i]];
         if(!(index % 5)) {
             index = 0;
             cout << endl;
         }
     }
+    cout << endl;
 }
 

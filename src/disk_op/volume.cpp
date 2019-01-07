@@ -18,7 +18,7 @@ using namespace wyfs;
 shared_ptr<volume> volume::instance = nullptr;
 
 shared_ptr<volume> &wyfs::volume::get_instance() {
-    if(instance != nullptr)
+    if(instance == nullptr)
         instance = shared_ptr<volume>(new volume());
     return instance;
 }

@@ -184,35 +184,35 @@ FS_lib_static/fast:
 	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/build
 .PHONY : FS_lib_static/fast
 
-disk_op/disk_init.o: disk_op/disk_init.cpp.o
+cache/commands.o: cache/commands.cpp.o
 
-.PHONY : disk_op/disk_init.o
+.PHONY : cache/commands.o
 
 # target to build an object file
-disk_op/disk_init.cpp.o:
-	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.o
-	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.o
-.PHONY : disk_op/disk_init.cpp.o
+cache/commands.cpp.o:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/cache/commands.cpp.o
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/cache/commands.cpp.o
+.PHONY : cache/commands.cpp.o
 
-disk_op/disk_init.i: disk_op/disk_init.cpp.i
+cache/commands.i: cache/commands.cpp.i
 
-.PHONY : disk_op/disk_init.i
+.PHONY : cache/commands.i
 
 # target to preprocess a source file
-disk_op/disk_init.cpp.i:
-	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.i
-	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.i
-.PHONY : disk_op/disk_init.cpp.i
+cache/commands.cpp.i:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/cache/commands.cpp.i
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/cache/commands.cpp.i
+.PHONY : cache/commands.cpp.i
 
-disk_op/disk_init.s: disk_op/disk_init.cpp.s
+cache/commands.s: cache/commands.cpp.s
 
-.PHONY : disk_op/disk_init.s
+.PHONY : cache/commands.s
 
 # target to generate assembly for a file
-disk_op/disk_init.cpp.s:
-	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/disk_op/disk_init.cpp.s
-	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/disk_op/disk_init.cpp.s
-.PHONY : disk_op/disk_init.cpp.s
+cache/commands.cpp.s:
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_shared.dir/build.make src/CMakeFiles/FS_lib_shared.dir/cache/commands.cpp.s
+	cd /home/wy/CLionProjects/FS/build && $(MAKE) -f src/CMakeFiles/FS_lib_static.dir/build.make src/CMakeFiles/FS_lib_static.dir/cache/commands.cpp.s
+.PHONY : cache/commands.cpp.s
 
 disk_op/inode_block.o: disk_op/inode_block.cpp.o
 
@@ -348,9 +348,9 @@ help:
 	@echo "... FS_lib_static"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... disk_op/disk_init.o"
-	@echo "... disk_op/disk_init.i"
-	@echo "... disk_op/disk_init.s"
+	@echo "... cache/commands.o"
+	@echo "... cache/commands.i"
+	@echo "... cache/commands.s"
 	@echo "... disk_op/inode_block.o"
 	@echo "... disk_op/inode_block.i"
 	@echo "... disk_op/inode_block.s"

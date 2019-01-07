@@ -6,19 +6,23 @@
 
 #IncludeRegexTransform: 
 
+..//include/cache/commands.h
+vector
+-
+tiff.h
+-
+map
+-
+include/constant/constants.h
+-
+
 ..//include/constant/constants.h
 string
 -
 tiff.h
 -
 
-..//include/disk_op/disk_init.h
-vector
--
-tiff.h
--
-
-..//include/disk_op/inode_block.h
+..//include/disk_op/data_structs.h
 tiff.h
 -
 include/constant/constants.h
@@ -29,9 +33,13 @@ include/inode/inode.h
 -
 memory
 -
+algorithm
+-
 tiff.h
 -
 vector
+-
+include/disk_op/data_structs.h
 -
 
 ..//include/inode/inode.h
@@ -56,23 +64,17 @@ memory
 fstream
 -
 
-/home/wy/CLionProjects/FS/src/disk_op/disk_init.cpp
-include/disk_op/disk_init.h
+/home/wy/CLionProjects/FS/src/cache/commands.cpp
+include/cache/commands.h
 -
-tiff.h
+include/disk_op/volume.h
 -
 iostream
 -
-include/constant/constants.h
--
-io.h
-/home/wy/CLionProjects/FS/src/disk_op/io.h
-fstream
+iomanip
 -
 
 /home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp
-include/disk_op/inode_block.h
--
 cstring
 -
 
@@ -80,8 +82,6 @@ cstring
 include/disk_op/volume.h
 -
 include/constant/constants.h
--
-include/disk_op/inode_block.h
 -
 fstream
 -
@@ -95,9 +95,17 @@ cassert
 -
 cmath
 -
+include/cache/commands.h
+-
 
 /home/wy/CLionProjects/FS/src/inode/inode.cpp
 include/inode/inode.h
+-
+iostream
+-
+time.h
+-
+cstdio
 -
 
 /home/wy/CLionProjects/FS/src/io/io.cpp
