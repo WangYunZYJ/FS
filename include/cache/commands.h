@@ -11,12 +11,14 @@
 #include <include/constant/constants.h>
 
 namespace wyfs{
-    static std::vector<uint32> curr_path({0});
-    static std::map<std::string, uint32> file_name2id;
-    static std::map<uint32, std::string> file_id2name;
-    static std::map<std::string, std::string> name2pwd;
-    static char owner[NAME_SIZE];
-    static uint32 group;
+    extern std::vector<uint32> curr_path;
+    extern std::map<std::string, uint32> file_name2id;
+    extern std::map<uint32, std::string> file_id2name;
+    extern std::map<std::string, std::string> name2pwd;
+    extern char owner[];
+    extern uint32 group;
+
+    void update_cache(std::string filename, uint32 file_inode_addr);
 
     std::vector<uint32> split_path_string(std::string path);
 

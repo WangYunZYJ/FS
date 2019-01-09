@@ -238,8 +238,13 @@ uint32 volume::create_file(char *file_name, char *owner, uint32 group, FileMode 
 void volume::init_cache() {
     wyfs::file_name2id["/"] = 0;
     wyfs::file_id2name[0] = "/";
+
+    read_all_file_name_id_to_cache();
+    read_all_name_pwd_to_cache();
+
     group = 0;
     strcpy(owner, "\0");
+    curr_path = {0};
 }
 
 /**
@@ -323,6 +328,7 @@ void volume::init_inode_table() {
 void volume::disk_init() {
     init_root_block();
     init_inode_table();
+    init_username_password();
     init_link_disk(FREE_BLOCK_BEGIN);
 }
 
@@ -444,6 +450,7 @@ void volume::update_tree_lists(uint32 father_inode_addr, uint32 son_inode_addr) 
     _->seekg(BLOCK_SIZE * father_inode_addr);
     _->read(reinterpret_cast<char*>(&father_inode), sizeof(inode));
     tree_list treeList;
+    treeList.sons_size = 0;
     if(father_inode.block_count == 1){
         _->seekg(father_inode.dirct_block[0] * BLOCK_SIZE);
         _->read(reinterpret_cast<char*>(&treeList), sizeof(tree_list));
@@ -474,8 +481,10 @@ void volume::add_user_pwd(string username, string pwd) {
     username_password usernamePassword;
     _->seekg(USERNAME_PASSWORD * BLOCK_SIZE);
     _->read(reinterpret_cast<char*>(&usernamePassword), sizeof(username_password));
+    //std::clog << "usernamePassword: " << usernamePassword.user_counts << endl;
     strcpy(usernamePassword.users[usernamePassword.user_counts].username, username.c_str());
     strcpy(usernamePassword.users[usernamePassword.user_counts].password, pwd.c_str());
+    usernamePassword.user_counts++;
     _->seekp(USERNAME_PASSWORD * BLOCK_SIZE);
     _->write(reinterpret_cast<char*>(&usernamePassword), sizeof(username_password));
 }
@@ -515,4 +524,32 @@ bool volume::is_normal_file(uint32 inode_addr) {
     if(file_inode.file_mode == FileMode::NORMAL_FILE)
         return true;
     return false;
+}
+
+
+void volume::read_all_file_name_id_to_cache() {
+    auto _ = io::get_instance();
+    username_saved_as_menu usernameSavedAsMenu;
+    _->seekg(BLOCK_SIZE * INODE_TABLE);
+    _->read(reinterpret_cast<char *>(&usernameSavedAsMenu), sizeof(username_saved_as_menu));
+    while (true) {
+        for (size_t i = 0; i < usernameSavedAsMenu.name_counts; ++i) {
+            wyfs::file_id2name[usernameSavedAsMenu.fiaddr[i].inode_addr] = usernameSavedAsMenu.fiaddr[i].filename;
+            wyfs::file_name2id[usernameSavedAsMenu.fiaddr[i].filename] = usernameSavedAsMenu.fiaddr[i].inode_addr;
+        }
+        if(!usernameSavedAsMenu.next_menu_block_addr)
+            break;
+        _->seekg(BLOCK_SIZE * usernameSavedAsMenu.next_menu_block_addr);
+        _->read(reinterpret_cast<char *>(&usernameSavedAsMenu), sizeof(username_saved_as_menu));
+    }
+}
+
+void volume::read_all_name_pwd_to_cache() {
+    auto _ = io::get_instance();
+    username_password usernamePassword;
+    _->seekg(BLOCK_SIZE * USERNAME_PASSWORD);
+    _->read(reinterpret_cast<char*>(&usernamePassword), sizeof(username_password));
+    for(size_t i = 0; i < usernamePassword.user_counts; ++i) {
+        wyfs::name2pwd[usernamePassword.users[i].username] = usernamePassword.users[i].password;
+    }
 }

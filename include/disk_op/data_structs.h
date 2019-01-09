@@ -15,16 +15,6 @@ namespace wyfs
         uint32 msg_length;
         char byte[BLOCK_SIZE - sizeof(uint32)];
     };
-//
-//    struct inode_block
-//    {
-//        uint32 inode_size; // 4
-//        char file_name[NAME_SIZE]; //14
-//        uint32 ids[INODE_COUNT_PER_BLOCK];
-//        uint32 next;
-//        inode_block() = default;
-//    };
-
 
     struct filename_and_inode_addr{
         char filename[NAME_SIZE];
@@ -37,7 +27,7 @@ namespace wyfs
         uint32 next_menu_block_addr;
     };
 
-    struct tree_list{
+    struct tree_list {
         uint32 sons_size;
         uint32 sons_inode_addr[MAX_SONS_COUNT];
     };

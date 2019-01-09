@@ -192,6 +192,10 @@ namespace wyfs
 
         void init_cache();
 
+        void read_all_file_name_id_to_cache();
+
+        void read_all_name_pwd_to_cache();
+
         void add_user_pwd(string username, string pwd);
 
         vector<uint32> get_sons_inode_addr(const vector<uint32> &inode_path);

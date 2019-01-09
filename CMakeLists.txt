@@ -31,3 +31,4 @@ add_subdirectory(src)
 add_subdirectory(test)
 
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
+set(CMAKE_BUILD_TYPE Debug)
