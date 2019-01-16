@@ -41,6 +41,7 @@ namespace wyfs
         uint32 user_counts;
         username_pwd_in users[BLOCK_SIZE / sizeof(username_pwd_in)];//28B
     };
+
 }
 
 #endif //FS_DATA_STRUCTS_H

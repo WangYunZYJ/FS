@@ -16,6 +16,8 @@ map
 include/constant/constants.h
 -
 
+..//include/cache/corlor_cout.h
+
 ..//include/constant/constants.h
 string
 -
@@ -58,14 +60,24 @@ memory
 fstream
 -
 
+../include/io/io.h
+memory
+-
+fstream
+-
+
 /home/wy/CLionProjects/FS/src/cache/commands.cpp
 include/cache/commands.h
 -
 include/disk_op/volume.h
 -
+include/cache/corlor_cout.h
+-
 iostream
 -
 iomanip
+-
+cstring
 -
 
 /home/wy/CLionProjects/FS/src/disk_op/volume.cpp
@@ -85,6 +97,36 @@ cassert
 -
 cmath
 -
+ctime
+-
 include/cache/commands.h
+-
+include/cache/corlor_cout.h
+-
+iomanip
+-
+
+/home/wy/CLionProjects/FS/src/inode/inode.cpp
+include/inode/inode.h
+-
+iostream
+-
+time.h
+-
+cstdio
+-
+
+/home/wy/CLionProjects/FS/src/io/io.cpp
+iostream
+-
+io/io.h
+/home/wy/CLionProjects/FS/src/io/io/io.h
+assert.h
+-
+cstring
+-
+include/io/io.h
+-
+include/constant/constants.h
 -
 

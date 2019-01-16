@@ -79,7 +79,7 @@ namespace wyfs
          */
         void init_link_disk(const uint32 block_id);
 
-
+        std::vector<inode> get_sub_inodes(uint32 father_inode_addr);
     public:
 
         /**
@@ -171,7 +171,7 @@ namespace wyfs
          * @param path 文件路径
          * @return 文件数据
          */
-        vector<file_msg> read_file_msg(char* path);
+        vector<file_msg> read_file_msg(uint32 inode_id);
 
         /**
          * added by wy on 19-1-2 23:00
@@ -198,9 +198,21 @@ namespace wyfs
 
         void add_user_pwd(string username, string pwd);
 
+        bool update_user_pwd(string username, string pwd);
+
         vector<uint32> get_sons_inode_addr(const vector<uint32> &inode_path);
 
         bool is_normal_file(uint32 inode_addr);
+
+        void print_inode_msg(uint32 father_inode_addr);
+
+        uint32 get_sum_son_blocks_count(uint32 father_inode_addr);
+
+        void release_dir_or_file(uint32 inode_addr, uint32 father_inode_addr);
+
+        void echo_msg_to_file(uint32 inode_addr, string msg);
+
+        string get_msg(uint32 inode_addr);
     };
 }
 

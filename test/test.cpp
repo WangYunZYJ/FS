@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     auto _volume = wyfs::volume::get_instance();
-//
+
 //    _volume->disk_init();
 
     _volume->init_cache();
@@ -27,6 +27,20 @@ int main()
             wyfs::touch();
         else if(command == "useradd")
             wyfs::useradd();
+        else if(command == "pwd")
+            wyfs::pwd();
+        else if(command == "passwd")
+            wyfs::passwd();
+        else if(command == "rm")
+            wyfs::rm();
+        else if(command == "cp")
+            wyfs::cp();
+        else if(command == "mv")
+            wyfs::mv();
+        else if(command == "echo")
+            wyfs::echo();
+        else if (command == "cat")
+            wyfs::cat();
         else
             cout << command <<": 未找到命令\n";
         wyfs::print_curr_path();

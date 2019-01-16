@@ -18,6 +18,8 @@ namespace wyfs{
     extern char owner[];
     extern uint32 group;
 
+    extern uint32 curr_file_each_line;
+
     void update_cache(std::string filename, uint32 file_inode_addr);
 
     std::vector<uint32> split_path_string(std::string path);
@@ -35,6 +37,30 @@ namespace wyfs{
     void cd();
 
     void ls();
+
+    void pwd();
+
+    void passwd();
+
+    void rm();
+
+    void mv();
+
+    void cp();
+
+    void echo();
+
+    void chmod();
+
+    void chown();
+
+    void chgrp();
+
+    void unmask();
+
+    void ln();
+
+    void cat();
 }
 
 #endif //FS_COMMANDS_H

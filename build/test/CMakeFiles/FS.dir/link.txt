@@ -1,1 +1,1 @@
-/usr/bin/c++      CMakeFiles/FS.dir/test.cpp.o CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o  -o ../bin/FS  -L/home/wy/CLionProjects/FS/build/lib -rdynamic -lwyfs -Wl,-rpath,/home/wy/CLionProjects/FS/build/lib 
+/usr/bin/c++   -g   CMakeFiles/FS.dir/test.cpp.o CMakeFiles/FS.dir/disk_op/disk_init_test.cpp.o  -o ../bin/FS  -L/home/wy/CLionProjects/FS/build/lib -rdynamic -lwyfs -Wl,-rpath,/home/wy/CLionProjects/FS/build/lib 
