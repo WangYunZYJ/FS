@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 int main()
 {
     auto _volume = wyfs::volume::get_instance();
@@ -11,6 +13,8 @@ int main()
 //    _volume->disk_init();
 
     _volume->init_cache();
+    wyfs::login();
+
     wyfs::print_curr_path();
     string command;
     while (true) {
@@ -41,6 +45,18 @@ int main()
             wyfs::echo();
         else if (command == "cat")
             wyfs::cat();
+        else if(command == "fill")
+            wyfs::fill();
+        else if(command == "chmod")
+            wyfs::chmod();
+        else if(command == "chown")
+            wyfs::chown();
+        else if(command == "chgrp")
+            wyfs::chgrp();
+        else if(command == "unmask")
+            wyfs::unmask();
+        else if(command == "ln")
+            wyfs::ln();
         else
             cout << command <<": 未找到命令\n";
         wyfs::print_curr_path();

@@ -25,7 +25,7 @@ namespace wyfs
     const uint32 INODE_TABLE = 1;
     const uint32 TREE_STRUCT = 0;
     const uint32 WIDTH = 10;
-    const std::string file_msg_path = "/home/wy/CLionProjects/FS/msg";
+    const std::string FILE_MSG_PATH = "/home/wy/CLionProjects/FS/msg";
 }
 
 #endif //FS_CONSTANTS_H

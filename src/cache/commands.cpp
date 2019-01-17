@@ -8,17 +8,20 @@
 #include <iostream>
 #include <iomanip>
 #include <cstring>
+#include <fstream>
 
 std::vector<uint32> wyfs::curr_path;
 std::map<std::string, uint32> wyfs::file_name2id;
 std::map<uint32, std::string> wyfs::file_id2name;
 std::map<std::string, std::string> wyfs::name2pwd;
+std::map<uint32, std::string> wyfs::file_id2name_full;
+
 char wyfs::owner[NAME_SIZE];
 uint32 wyfs::group;
 uint32 wyfs::curr_file_each_line = 0;
 
 void wyfs::update_cache(std::string filename, uint32 file_inode_addr) {
-    file_name2id[filename] = file_inode_addr;
+    file_name2id[wyfs::get_full_name(filename, curr_path)] = file_inode_addr;
     file_id2name[file_inode_addr] = filename;
 }
 
@@ -38,8 +41,8 @@ std::vector<uint32> wyfs::split_path_string(std::string path) {
     while(p != string::npos){
         string dirName = path.substr(0, p);
         path = path.substr(p + 1);
-        if(file_name2id[dirName]) {
-            pathVec.push_back(file_name2id[dirName]);
+        if(file_name2id[wyfs::get_full_name(dirName, pathVec)]) {
+            pathVec.push_back(file_name2id[wyfs::get_full_name(dirName, pathVec)]);
         }else{
             if(dirName == "..") {
                 if(pathVec.size() == 1) {
@@ -57,8 +60,8 @@ std::vector<uint32> wyfs::split_path_string(std::string path) {
         }
         p = path.find_first_of('/');
     }
-    if(file_name2id[path]) {
-        pathVec.push_back(file_name2id[path]);
+    if(file_name2id[wyfs::get_full_name(path, pathVec)]) {
+        pathVec.push_back(file_name2id[wyfs::get_full_name(path, pathVec)]);
     }else{
         if(path == "..") {
             if(pathVec.size() == 1) {
@@ -77,11 +80,11 @@ std::vector<uint32> wyfs::split_path_string(std::string path) {
             return pathVec;
         }
     }
-
     return pathVec;
 }
 
-std::string wyfs::union_uint2path(const std::vector<uint32> &pathVec) {
+std::string wyfs::get_full_name(const std::vector<uint32>& pathVec)
+{
     string path = "/";
     for(size_t i = 1; i < pathVec.size() - 1; ++i) {
         path += file_id2name[pathVec[i]];
@@ -89,6 +92,18 @@ std::string wyfs::union_uint2path(const std::vector<uint32> &pathVec) {
     }
     if(pathVec.size() > 1)
         path += file_id2name[pathVec[pathVec.size() - 1]];
+    return path;
+}
+
+std::string wyfs::get_full_name(const std::string path, const std::vector<uint32> &pathVec) {
+    if(pathVec.size() == 1)
+        return wyfs::get_full_name(pathVec) + path;
+    else
+        return wyfs::get_full_name(pathVec) + '/' + path;
+}
+
+std::string wyfs::union_uint2path(const std::vector<uint32> &pathVec) {
+    string path = wyfs::get_full_name(pathVec);
     path += "$ ";
     return path;
 }
@@ -108,7 +123,13 @@ void wyfs::touch() {
     auto _volume = volume::get_instance();
     char file_name[NAME_SIZE];
     cin >> file_name;
-    uint32 file_inode_addr = _volume->create_file(file_name, owner, group);
+
+    string tmpPath = wyfs::get_full_name(curr_path);
+    tmpPath += "/"; tmpPath += file_name;
+    char trueUsername[NAME_SIZE];
+    strcpy(trueUsername, tmpPath.c_str());
+
+    uint32 file_inode_addr = _volume->create_file(trueUsername, owner, group);
     _volume->update_tree_lists(curr_path[curr_path.size() - 1], file_inode_addr);
     update_cache(file_name, file_inode_addr);
 }
@@ -124,7 +145,11 @@ void wyfs::useradd() {
 
     _volume->add_user_pwd(username, password);
 
-    uint32 file_inode_addr = _volume->create_file(username, username, group, FileMode::MENU_FILE);
+    string tmpStr = "/"; tmpStr += username;
+    char trueUsername[NAME_SIZE];
+    strcpy(trueUsername, tmpStr.c_str());
+
+    uint32 file_inode_addr = _volume->create_file(trueUsername, username, group, FileMode::MENU_FILE);
     _volume->update_tree_lists(0, file_inode_addr);
 
     update_cache(username, file_inode_addr);
@@ -139,7 +164,13 @@ void wyfs::mkdir() {
     auto _volume = volume::get_instance();
     char file_name[NAME_SIZE];
     cin >> file_name;
-    uint32 file_inode_addr = _volume->create_file(file_name, owner, group, FileMode::MENU_FILE);
+
+    string tmpPath = wyfs::get_full_name(curr_path);
+    tmpPath += "/"; tmpPath += file_name;
+    char trueUsername[NAME_SIZE];
+    strcpy(trueUsername, tmpPath.c_str());
+
+    uint32 file_inode_addr = _volume->create_file(trueUsername, owner, group, FileMode::MENU_FILE);
     _volume->update_tree_lists(curr_path[curr_path.size() - 1], file_inode_addr);
 
     update_cache(file_name, file_inode_addr);
@@ -169,16 +200,18 @@ void wyfs::cd() {
                 return;
             }
 
-            if((curr_path.size() == 1 && pathVec.size()) || curr_path[1] != pathVec[1])  {
-                cout << "请输入用户" << file_id2name[pathVec[0]] << "的口令： ";
-                string password;
-                cin >> password;
-                if(password != name2pwd[file_id2name[pathVec[1]]]) {
-                    cout << "用户口令错误\n";
-                    return;
-                }
-                strcpy(owner, file_id2name[pathVec[1]].c_str());
-            }
+            //TODO
+            //不再使用口令控制文件夹，通过rwx权限控制显示。
+//            if((curr_path.size() == 1 && pathVec.size()) || curr_path[1] != pathVec[1])  {
+//                cout << "请输入用户" << file_id2name[pathVec[0]] << "的口令： ";
+//                string password;
+//                cin >> password;
+//                if(password != name2pwd[file_id2name[pathVec[1]]]) {
+//                    cout << "用户口令错误\n";
+//                    return;
+//                }
+//                strcpy(owner, file_id2name[pathVec[1]].c_str());
+//            }
             curr_path = pathVec;
         }
     }
@@ -191,10 +224,13 @@ void wyfs::ls() {
         vector<uint32> sons = _volume->get_sons_inode_addr(curr_path);
         for (size_t i = 0; i < sons.size(); ++i) {
             curr_file_each_line++;
-            cgreen << std::left << setw(WIDTH) << file_id2name[sons[i]];
+            if(!_volume->is_normal_file(sons[i]))
+                cblue << std::left << setw(WIDTH) << file_id2name[sons[i]];
+            else
+                cpurple << std::left << setw(WIDTH) << file_id2name[sons[i]];
             if (!(curr_file_each_line % 5)) {
                 curr_file_each_line = 0;
-                cgreen << endl;
+                cblue << endl;
             }
         }
         cout << endl;
@@ -207,8 +243,8 @@ void wyfs::ls() {
         string sub_command;
         cin >> sub_command;
         if(sub_command == "-a") {
-            cgreen << std::left << setw(WIDTH) << ".";
-            cgreen << std::left << setw(WIDTH) << "..";
+            cblue << std::left << setw(WIDTH) << ".";
+            cblue << std::left << setw(WIDTH) << "..";
             curr_file_each_line = 2;
             print_files();
         }
@@ -263,7 +299,7 @@ void wyfs::rm() {
     for(size_t i = 0; i < sons_inode_addr.size(); ++i) {
         if(file_id2name[sons_inode_addr[i]] == file_name) {
             _volume->release_dir_or_file(sons_inode_addr[i], curr_path[curr_path.size() - 1]);
-            file_name2id[file_id2name[sons_inode_addr[i]]] = 0;
+            file_name2id[get_full_name(file_id2name[sons_inode_addr[i]],curr_path)] = 0;
             file_id2name[sons_inode_addr[i]] = "";
             return;
         }
@@ -301,9 +337,13 @@ void wyfs::echo() {
     if(getchar() == ' ') {
         cin >> op >> des;
         auto pathVec = split_path_string(des);
+        if(pathVec.size() == 0) {
+            cwhite << "echo: 没有那个目录或文件\n";
+            return;
+        }
         if(op == ">" && pathVec.size()) {
             auto _volume = volume::get_instance();
-            _volume->echo_msg_to_file(pathVec[pathVec.size() - 1], msg);
+            _volume->echo_msg_to_file(pathVec.back(), msg);
         }else {
             cwhite << "echo: 没有参数\'" << op << "\'\n";
             return;
@@ -323,5 +363,92 @@ void wyfs::cat() {
         cwhite << "cat: " << path << ": 没有那个文件或目录\n";
         return;
     }
-    cwhite << _volume->get_msg(pathVec[pathVec.size() - 1]) << endl;
+    cwhite << _volume->get_msg(pathVec.back()) << endl;
 }
+
+void wyfs::login() {
+
+    if(!name2pwd.size()) {
+        cwhite << "创建一个用户\n请输入用户名: ";
+        useradd();
+        return;
+    }
+    while(true) {
+        string username, password;
+        auto _volume = volume::get_instance();
+        cwhite << "请输入用户名: ";
+        cin >> username;
+        cwhite << "请输入用户密码: ";
+        cin >> password;
+        if (name2pwd[username] != password) {
+            cblue << "用户名或密码错误，请重新输入\n";
+            continue;
+        }
+        else {
+            strcpy(owner, username.c_str());
+            break;
+        }
+    }
+}
+
+void wyfs::fill() {
+
+    string des;
+    cin >> des;
+    auto pathVec = split_path_string(des);
+    if(pathVec.size() == 0) {
+        cwhite << "fill: 没有那个目录或文件\n";
+        return;
+    }
+    string msg, tmpAns;
+    ifstream file(FILE_MSG_PATH);
+    while (getline(file, tmpAns))
+        msg += tmpAns + '\n';
+    file.close();
+    auto _volume = volume::get_instance();
+    _volume->echo_msg_to_file(pathVec.back(), msg);
+}
+
+std::string wyfs::get_single_name(std::string path) {
+    auto p = path.find_last_of('/');
+    if(p == string::npos)
+        return path;
+    else return path.substr(p+1);
+}
+
+void wyfs::chmod() {
+    string permission, path;
+    auto _volume = volume::get_instance();
+    cin >> permission >> path;
+    auto pathVec = split_path_string(path);
+    if(!pathVec.size()) {
+        cwhite << "chmod: 文件或目录不存在\n";
+        return;
+    }
+    if(pathVec.size() <= 2) {
+        cwhite << "Permission Denied!\n";
+        return;
+    }
+    _volume->chmod(pathVec.back(), permission);
+}
+
+void wyfs::chown() {
+    string owner, path;
+    auto _volume = volume::get_instance();
+    cin >> owner >> path;
+    auto pathVec = split_path_string(path);
+    if(!pathVec.size()) {
+        cwhite << "chmod: 文件或目录不存在\n";
+        return;
+    }
+    if(pathVec.size() <= 2) {
+        cwhite << "Permission Denied!\n";
+        return;
+    }
+    _volume->chown(pathVec.back(), owner);
+}
+
+void wyfs::chgrp() {
+
+}
+

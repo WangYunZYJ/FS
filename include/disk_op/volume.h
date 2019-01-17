@@ -213,6 +213,10 @@ namespace wyfs
         void echo_msg_to_file(uint32 inode_addr, string msg);
 
         string get_msg(uint32 inode_addr);
+
+        void chmod(const uint32 inode_addr, const string& permission);
+
+        void chown(const uint32 inode_addr, const string& owner);
     };
 }
 

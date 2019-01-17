@@ -12,6 +12,7 @@ namespace wyfs
 #define cyellow cout << "\033[33m"
 #define cblue cout << "\033[34m"
 #define cwhite cout << "\033[37m"
+#define cpurple cout << "\033[35m"
 }
 
 #endif //FS_CORLOR_COUT_H

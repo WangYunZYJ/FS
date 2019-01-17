@@ -381,7 +381,7 @@ vector<file_msg> volume::read_file_msg(const inode &_inode) {
         }
     }
     else {
-        uint32 first_addr_size = static_cast<uint32 >(ceil(_inode.block_count * 1.0 / INODE_SECOND_BLOCK_COUNT));
+        uint32 first_addr_size = static_cast<uint32>(ceil(_inode.block_count * 1.0 / INODE_SECOND_BLOCK_COUNT));
         _->seekg(_inode.second_block * BLOCK_SIZE);
         vector<uint32> second_cache_addr;
         for(size_t i = 0; i < first_addr_size; i++){
@@ -397,6 +397,8 @@ vector<file_msg> volume::read_file_msg(const inode &_inode) {
                 uint32 final_block_addr;
                 _->read(reinterpret_cast<char*>(&final_block_addr), sizeof(uint32));
                 final_addrs.push_back(final_block_addr);
+                per_count++;
+                count++;
             }
         }
         for (size_t i = 0; i < final_addrs.size(); ++i) {
@@ -538,8 +540,9 @@ void volume::read_all_file_name_id_to_cache() {
     _->read(reinterpret_cast<char *>(&usernameSavedAsMenu), sizeof(username_saved_as_menu));
     while (true) {
         for (size_t i = 0; i < usernameSavedAsMenu.name_counts; ++i) {
-            wyfs::file_id2name[usernameSavedAsMenu.fiaddr[i].inode_addr] = usernameSavedAsMenu.fiaddr[i].filename;
+            wyfs::file_id2name_full[usernameSavedAsMenu.fiaddr[i].inode_addr] = usernameSavedAsMenu.fiaddr[i].filename;
             wyfs::file_name2id[usernameSavedAsMenu.fiaddr[i].filename] = usernameSavedAsMenu.fiaddr[i].inode_addr;
+            wyfs::file_id2name[usernameSavedAsMenu.fiaddr[i].inode_addr] = wyfs::get_single_name(string(usernameSavedAsMenu.fiaddr[i].filename));
         }
         if(!usernameSavedAsMenu.next_menu_block_addr)
             break;
@@ -742,7 +745,7 @@ void volume::release_dir_or_file(uint32 inode_addr, uint32 father_inode_addr) {
 
 void volume::echo_msg_to_file(uint32 inode_addr, string msg) {
 
-    uint32 msg_size = sizeof(msg);
+    uint32 msg_size = msg.length();
     inode new_inode;
     auto _ = io::get_instance();
     _->seekg(BLOCK_SIZE * inode_addr);
@@ -769,27 +772,54 @@ void volume::echo_msg_to_file(uint32 inode_addr, string msg) {
         new_inode.second_block = applied_first_block[0];
         _->seekp(BLOCK_SIZE * applied_first_block[0]);
 
+        //_->write(reinterpret_cast<char*>(&applied_second_block.size()), sizeof(uint32));
         for(size_t i = 0; i < applied_second_block.size(); ++i){
             _->write(reinterpret_cast<char*>(&applied_second_block[i]), sizeof(uint32));
         }
-        size_t index = 0;
+         size_t index = 0;
         for(size_t i = 0; i < applied_second_block.size(); ++i){
             _->seekp(BLOCK_SIZE * applied_second_block[i]);
             for(size_t j = 0;index < applied_blocks.size()&&j<INODE_SECOND_BLOCK_COUNT; ++index, ++j){
-                _->write(reinterpret_cast<char*>(applied_blocks[index]), sizeof(uint32));
+                _->write(reinterpret_cast<char*>(&applied_blocks[index]), sizeof(uint32));
             }
         }
     }
     for(size_t i = 0; i < applied_blocks.size(); ++i) {
         file_msg fileMsg;
         fileMsg.msg_length = min(BLOCK_SIZE - sizeof(uint32), msg.length() - msg_index);
-        msg_index += min(BLOCK_SIZE - sizeof(uint32), msg.length() - msg_index);
         strcpy(fileMsg.byte, msg.substr(msg_index, fileMsg.msg_length).c_str());
+        msg_index += min(BLOCK_SIZE - sizeof(uint32), msg.length() - msg_index);
         _->seekp(BLOCK_SIZE * applied_blocks[i]);
         _->write(reinterpret_cast<char*>(&fileMsg), sizeof(file_msg));
     }
+    _->seekp(BLOCK_SIZE * inode_addr);
+    _->write(reinterpret_cast<char*>(&new_inode), sizeof(inode));
 }
 
 string volume::get_msg(uint32 inode_addr) {
-    return decode_file_msg(read_file_msg(inode_addr));
+
+    auto file = read_file_msg(inode_addr);
+    return decode_file_msg(file);
+}
+
+void volume::chmod(uint32 inode_addr, const string &permission) {
+    auto _ = io::get_instance();
+    inode tmp_inode;
+    _->seekg(BLOCK_SIZE * inode_addr);
+    _->read(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
+    tmp_inode.file_permision.owner = permission[0] - '0';
+    tmp_inode.file_permision.group_menber = permission[1] - '0';
+    tmp_inode.file_permision.others = permission[2] - '0';
+    _->seekp(BLOCK_SIZE * inode_addr);
+    _->write(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
+}
+
+void volume::chown(const uint32 inode_addr, const string &owner) {
+    auto _ = io::get_instance();
+    inode tmp_inode;
+    _->seekg(BLOCK_SIZE * inode_addr);
+    _->read(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
+    strcpy(tmp_inode.owner, owner.c_str());
+    _->seekp(BLOCK_SIZE * inode_addr);
+    _->write(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
 }
