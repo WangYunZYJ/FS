@@ -203,7 +203,7 @@ void volume::apply_error_occurs(vector<uint32> &applied_blocks, uint32 &stack_si
  * @bug inode_block结构提格式不对
  */
 
-uint32 volume::create_file(char *file_name, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
+uint32 volume::create_file(char *file_name, char *owner, char *group, FileMode fileMode, uint32 fileSize,
                            FilePermision filePermision) {
     username_saved_as_menu inodeBlock;
     auto _ = io::get_instance();
@@ -242,10 +242,13 @@ void volume::init_cache() {
     wyfs::file_name2id["/"] = 0;
     wyfs::file_id2name[0] = "/";
 
+    auto _ = io::get_instance();
+    _->seekg(BLOCK_SIZE * MASK_BLOCK);
+    _->read(reinterpret_cast<char*>(&wyfs::filePermision), sizeof(filePermision));
     read_all_file_name_id_to_cache();
     read_all_name_pwd_to_cache();
 
-    group = 0;
+    strcpy(group, "\0");
     strcpy(owner, "\0");
     curr_path = {0};
 
@@ -260,21 +263,23 @@ void volume::init_cache() {
  * @param fileSize
  * @param filePermision
  */
-uint32 volume::fill_inode_structure(inode &new_inode, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
+uint32 volume::fill_inode_structure(inode &new_inode, char *owner, char *group, FileMode fileMode, uint32 fileSize,
                                     FilePermision filePermision) {
     /**
      * @param inode_msg_block 存储当前inode所有信息的地址
      */
     auto inode_msg_block = apply_for_free_block(1);
     new_inode.inode_id = inode_msg_block[0];
-    new_inode.group = group;
+    strcpy(new_inode.group, group);
     new_inode.file_size = fileSize;
     strcpy(new_inode.owner, owner);
     new_inode.file_permision = filePermision;
     new_inode.timestamp = time(nullptr);
     new_inode.file_mode = fileMode;
     new_inode.block_count = (uint32)ceil(fileSize * 1.0 / BLOCK_SIZE);
-
+    memset(new_inode.dirct_block, 0, INODE_DIRECT_BLOCK_COUNT * sizeof(uint32));
+    new_inode.second_block = 0;
+    new_inode.first_block = 0;
     alloc_blocks_for_inode(new_inode);
 
     auto _ = io::get_instance();
@@ -644,8 +649,13 @@ void volume::print_inode_msg(uint32 father_inode_addr) {
         if(tmpInode.file_mode == FileMode::MENU_FILE)
             cwhite << get_sub_inodes(tmpInode.inode_id).size();
         else {
-            //TODO change link_count
-            cwhite << 1;
+            if(tmpInode.file_mode == FileMode::NORMAL_FILE) {
+                cwhite << 1;
+            }
+            else {
+                vector<uint32 > tmp = {0, 0, tmpInode.inode_id};
+                cwhite << get_sons_inode_addr(tmp).size();
+            }
         }
 
         cwhite << ' ';
@@ -747,9 +757,17 @@ void volume::echo_msg_to_file(uint32 inode_addr, string msg) {
 
     uint32 msg_size = msg.length();
     inode new_inode;
+    uint32 final_pos = BLOCK_SIZE * inode_addr;
     auto _ = io::get_instance();
     _->seekg(BLOCK_SIZE * inode_addr);
     _->read(reinterpret_cast<char*>(&new_inode), sizeof(inode));
+
+    if(new_inode.file_mode == FileMode::LINK_FILE) {
+        _->seekp(BLOCK_SIZE * new_inode.inode_id);
+        _->read(reinterpret_cast<char*>(&new_inode), sizeof(inode));
+        final_pos = BLOCK_SIZE * new_inode.inode_id;
+    }
+
     new_inode.block_count = ceil(msg_size * 1.0 / BLOCK_SIZE);
     auto applied_blocks = apply_for_free_block(ceil(msg_size * 1.0/ BLOCK_SIZE));
     size_t msg_index = 0;
@@ -792,12 +810,18 @@ void volume::echo_msg_to_file(uint32 inode_addr, string msg) {
         _->seekp(BLOCK_SIZE * applied_blocks[i]);
         _->write(reinterpret_cast<char*>(&fileMsg), sizeof(file_msg));
     }
-    _->seekp(BLOCK_SIZE * inode_addr);
+    _->seekp(final_pos);
     _->write(reinterpret_cast<char*>(&new_inode), sizeof(inode));
 }
 
 string volume::get_msg(uint32 inode_addr) {
 
+    inode tmp_inode;
+    auto _ = io :: get_instance();
+    _->seekg(BLOCK_SIZE * inode_addr);
+    _->read(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
+    if(tmp_inode.file_mode == FileMode::LINK_FILE)
+        inode_addr = tmp_inode.inode_id;
     auto file = read_file_msg(inode_addr);
     return decode_file_msg(file);
 }
@@ -822,4 +846,44 @@ void volume::chown(const uint32 inode_addr, const string &owner) {
     strcpy(tmp_inode.owner, owner.c_str());
     _->seekp(BLOCK_SIZE * inode_addr);
     _->write(reinterpret_cast<char*>(&tmp_inode), sizeof(inode));
+}
+
+void volume::link(uint32 link_cp_addr, uint32 src_addr) {
+    auto _ = io::get_instance();
+    inode link_cp;
+    _->seekg(BLOCK_SIZE * link_cp_addr);
+    _->read(reinterpret_cast<char*>(&link_cp), sizeof(inode));
+
+    link_cp.inode_id = src_addr;
+
+    _->seekp(BLOCK_SIZE * link_cp_addr);
+    _->write(reinterpret_cast<char*>(&link_cp), sizeof(inode));
+}
+
+bool volume::rename(uint32 inode_addr, std::string file_name) {
+    username_saved_as_menu inodeBlock;
+    auto _ = io::get_instance();
+    uint32 inode_block_pos = INODE_TABLE * BLOCK_SIZE;
+    _->seekg(inode_block_pos);
+    _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(username_saved_as_menu));
+    while(inodeBlock.next_menu_block_addr) {
+        for(auto i = 0; i < inodeBlock.name_counts; ++i) {
+            if(inodeBlock.fiaddr[i].inode_addr == inode_addr) {
+                strcpy(inodeBlock.fiaddr[i].filename, file_name.c_str());
+                _->seekp(inode_block_pos);
+                _->write(reinterpret_cast<char*>(&inodeBlock), sizeof(username_saved_as_menu));
+                return true;
+            }
+        }
+        inode_block_pos = BLOCK_SIZE * inodeBlock.next_menu_block_addr;
+        _->seekg(inode_block_pos);
+        _->read(reinterpret_cast<char*>(&inodeBlock), sizeof(username_saved_as_menu));
+    }
+    return false;
+}
+
+void volume::save_mask(FilePermision filePermision) {
+    auto _ = io::get_instance();
+    _->seekg(MASK_BLOCK * BLOCK_SIZE);
+    _->write(reinterpret_cast<char*>(&filePermision), sizeof(FilePermision));
 }

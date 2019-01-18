@@ -21,6 +21,7 @@ namespace wyfs
     const uint32 NAME_SIZE = 14;
     const uint32 ID_NAME_COUNT_PER_BLOCK = 28;
     const uint32 FREE_BLOCK_BEGIN = 4;
+    const uint32 MASK_BLOCK = 3;
     const uint32 USERNAME_PASSWORD = 2;
     const uint32 INODE_TABLE = 1;
     const uint32 TREE_STRUCT = 0;

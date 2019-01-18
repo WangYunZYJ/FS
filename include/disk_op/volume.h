@@ -12,6 +12,7 @@
 #include <tiff.h>
 #include <vector>
 #include <include/disk_op/data_structs.h>
+#include <include/cache/commands.h>
 
 using namespace std;
 namespace wyfs
@@ -58,7 +59,7 @@ namespace wyfs
          * @param fileSize
          * @param filePermision
          */
-        uint32 fill_inode_structure(inode &new_inode, char *owner, uint32 group, FileMode fileMode, uint32 fileSize,
+        uint32 fill_inode_structure(inode &new_inode, char *owner, char *group, FileMode fileMode, uint32 fileSize,
                                     FilePermision filePermision);
 
         /**
@@ -133,8 +134,8 @@ namespace wyfs
          * @param fileSize 文件大小
          * @param filePermision 文件权限
          */
-        uint32 create_file(char *file_name, char *owner, uint32 group, FileMode fileMode = FileMode::NORMAL_FILE,
-                           uint32 fileSize = 0, FilePermision filePermision = {7, 7, 5});
+        uint32 create_file(char *file_name, char *owner, char *group, FileMode fileMode = FileMode::NORMAL_FILE,
+                           uint32 fileSize = 0, FilePermision filePermision = wyfs::filePermision);
 
         /**
          * added by wy on 19-1-3 20:30
@@ -217,6 +218,12 @@ namespace wyfs
         void chmod(const uint32 inode_addr, const string& permission);
 
         void chown(const uint32 inode_addr, const string& owner);
+
+        void link(uint32 link_cp_addr, uint32 src_addr);
+
+        bool rename(uint32 inode_addr, std::string file_name);
+
+        void save_mask(FilePermision filePermision);
     };
 }
 

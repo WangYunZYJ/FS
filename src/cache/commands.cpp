@@ -15,14 +15,15 @@ std::map<std::string, uint32> wyfs::file_name2id;
 std::map<uint32, std::string> wyfs::file_id2name;
 std::map<std::string, std::string> wyfs::name2pwd;
 std::map<uint32, std::string> wyfs::file_id2name_full;
-
+wyfs::FilePermision wyfs::filePermision = {7, 7, 5};
 char wyfs::owner[NAME_SIZE];
-uint32 wyfs::group;
+char wyfs::group[NAME_SIZE];
 uint32 wyfs::curr_file_each_line = 0;
 
+
 void wyfs::update_cache(std::string filename, uint32 file_inode_addr) {
-    file_name2id[wyfs::get_full_name(filename, curr_path)] = file_inode_addr;
-    file_id2name[file_inode_addr] = filename;
+    file_name2id[filename] = file_inode_addr;
+    file_id2name[file_inode_addr] = get_single_name(filename);
 }
 
 std::vector<uint32> wyfs::split_path_string(std::string path) {
@@ -83,6 +84,17 @@ std::vector<uint32> wyfs::split_path_string(std::string path) {
     return pathVec;
 }
 
+
+std::string wyfs::get_father_path(std::string path) {
+    auto p = path.find_last_of('/');
+    if(p == string::npos)
+        return get_full_name(curr_path);
+    else {
+        path = path.substr(0, p);
+        return get_full_name(split_path_string(path));
+    }
+}
+
 std::string wyfs::get_full_name(const std::vector<uint32>& pathVec)
 {
     string path = "/";
@@ -131,7 +143,7 @@ void wyfs::touch() {
 
     uint32 file_inode_addr = _volume->create_file(trueUsername, owner, group);
     _volume->update_tree_lists(curr_path[curr_path.size() - 1], file_inode_addr);
-    update_cache(file_name, file_inode_addr);
+    update_cache(trueUsername, file_inode_addr);
 }
 
 void wyfs::useradd() {
@@ -152,8 +164,14 @@ void wyfs::useradd() {
     uint32 file_inode_addr = _volume->create_file(trueUsername, username, group, FileMode::MENU_FILE);
     _volume->update_tree_lists(0, file_inode_addr);
 
-    update_cache(username, file_inode_addr);
+    update_cache(trueUsername, file_inode_addr);
     name2pwd[username] = password;
+
+
+    if(owner[0]!='\0') {
+        strcpy(owner, username);
+        strcpy(group, username);
+    }
 }
 
 void wyfs::mkdir() {
@@ -173,7 +191,7 @@ void wyfs::mkdir() {
     uint32 file_inode_addr = _volume->create_file(trueUsername, owner, group, FileMode::MENU_FILE);
     _volume->update_tree_lists(curr_path[curr_path.size() - 1], file_inode_addr);
 
-    update_cache(file_name, file_inode_addr);
+    update_cache(trueUsername, file_inode_addr);
 }
 
 void wyfs::cd() {
@@ -230,7 +248,8 @@ void wyfs::ls() {
                 cpurple << std::left << setw(WIDTH) << file_id2name[sons[i]];
             if (!(curr_file_each_line % 5)) {
                 curr_file_each_line = 0;
-                cblue << endl;
+                if(i != sons.size() - 1)
+                    cblue << endl;
             }
         }
         cout << endl;
@@ -308,7 +327,35 @@ void wyfs::rm() {
 }
 
 void wyfs::mv() {
+    string srcPath, desPath;
+    cin >> srcPath >> desPath;
+    auto srcPathVec = split_path_string(srcPath);
+    auto desFatherPath = get_father_path(desPath);
+    auto fatherPathVec = split_path_string(desFatherPath);
+    if(!srcPathVec.size()) {
+        cwhite << "mv: failed to access \'" << srcPath << "\'没有那个目录或文件\n";
+        return;
+    }
+    if(!fatherPathVec.size()) {
+        cwhite << "mv: failed to access \'" << desPath << "\'没有那个目录或文件\n";
+        return;
+    }
+    if(fatherPathVec.size() == 1) {
+        cwhite << "Permission Denied!\n";
+        return;
+    }
 
+    auto _volume = volume::get_instance();
+    char file_name[NAME_SIZE];
+    strcpy(file_name, string(desFatherPath +'/' + get_single_name(desPath)).c_str());
+    if(fatherPathVec == curr_path) {
+        _volume->rename(srcPathVec.back(), file_name);
+    }else {
+        _volume->update_tree_lists(fatherPathVec.back(), srcPathVec.back());
+        update_cache(file_name, srcPathVec.back());
+        _volume->release_dir_or_file(srcPathVec.back(), srcPathVec[srcPathVec.size() - 2]);
+        file_name2id.erase(get_full_name(srcPathVec));
+    }
 }
 
 void wyfs::cp() {
@@ -370,7 +417,7 @@ void wyfs::login() {
 
     if(!name2pwd.size()) {
         cwhite << "创建一个用户\n请输入用户名: ";
-        useradd();
+        firstUseradd();
         return;
     }
     while(true) {
@@ -386,6 +433,7 @@ void wyfs::login() {
         }
         else {
             strcpy(owner, username.c_str());
+            strcpy(group, username.c_str());
             break;
         }
     }
@@ -433,9 +481,9 @@ void wyfs::chmod() {
 }
 
 void wyfs::chown() {
-    string owner, path;
+    string onr, path;
     auto _volume = volume::get_instance();
-    cin >> owner >> path;
+    cin >> onr >> path;
     auto pathVec = split_path_string(path);
     if(!pathVec.size()) {
         cwhite << "chmod: 文件或目录不存在\n";
@@ -445,10 +493,89 @@ void wyfs::chown() {
         cwhite << "Permission Denied!\n";
         return;
     }
-    _volume->chown(pathVec.back(), owner);
+    _volume->chown(pathVec.back(), onr);
 }
 
 void wyfs::chgrp() {
-
+    string grp, path;
+    cin >> grp >> path;
+    auto pathVec = split_path_string(path);
+    if(!pathVec.size()) {
+        cwhite << "chmod: 文件或目录不存在\n";
+        return;
+    }
+    if(pathVec.size() <= 2) {
+        cwhite << "Permission Denied!\n";
+        return;
+    }
+    auto _volume = volume::get_instance();
+    _volume->chown(pathVec.back(), grp);
 }
 
+void wyfs::ln() {
+    string srcPath, desPath;
+    cin >> srcPath >> desPath;
+    auto srcPathVec = split_path_string(srcPath);
+    auto desFatherPath = get_father_path(desPath);
+    auto fatherPathVec = split_path_string(desFatherPath);
+    if(!srcPathVec.size()) {
+        cwhite << "ln: failed to access \'" << srcPath << "\'没有那个目录或文件\n";
+        return;
+    }
+    if(!fatherPathVec.size()) {
+        cwhite << "ln: failed to access \'" << desPath << "\'没有那个目录或文件\n";
+        return;
+    }
+    if(fatherPathVec.size() == 1) {
+        cwhite << "Permission Denied!\n";
+        return;
+    }
+    auto _volume = volume::get_instance();
+
+    char file_name[NAME_SIZE];
+    strcpy(file_name, string(desFatherPath +'/' + get_single_name(desPath)).c_str());
+
+    uint32 file_inode_addr = _volume->create_file(file_name, owner, group, FileMode::LINK_FILE);
+    _volume->link(file_inode_addr, srcPathVec.back());
+    _volume->update_tree_lists(fatherPathVec.back(), file_inode_addr);
+    update_cache(file_name, file_inode_addr);
+}
+
+void wyfs::unmask() {
+    string permission;
+    cin >> permission;
+    if(permission.length() > 3) {
+        cwhite << "unmask: 默认权限错误\n";
+        return;
+    }
+    filePermision.owner = permission[0] - '0';
+    filePermision.group_menber = permission[1] - '0';
+    filePermision.others = permission[2] - '0';
+    auto _volume = volume::get_instance();
+    _volume->save_mask(filePermision);
+}
+
+void wyfs::firstUseradd() {
+        auto _volume = volume::get_instance();
+        char username[NAME_SIZE];
+        string password;
+        cin >> username;
+        cout << "请输入用户" << username << "的口令： ";
+        cin >> password;
+
+        _volume->add_user_pwd(username, password);
+
+        string tmpStr = "/"; tmpStr += username;
+        char trueUsername[NAME_SIZE];
+        strcpy(trueUsername, tmpStr.c_str());
+
+        uint32 file_inode_addr = _volume->create_file(trueUsername, username, group, FileMode::MENU_FILE);
+        _volume->update_tree_lists(0, file_inode_addr);
+
+        update_cache(trueUsername, file_inode_addr);
+        name2pwd[username] = password;
+
+
+        strcpy(owner, username);
+        strcpy(group, username);
+}

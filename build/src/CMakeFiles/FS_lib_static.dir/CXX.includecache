@@ -15,6 +15,8 @@ map
 -
 include/constant/constants.h
 -
+include/inode/inode.h
+-
 
 ..//include/cache/corlor_cout.h
 
@@ -42,6 +44,8 @@ tiff.h
 vector
 -
 include/disk_op/data_structs.h
+-
+include/cache/commands.h
 -
 
 ..//include/inode/inode.h
@@ -78,6 +82,8 @@ iostream
 iomanip
 -
 cstring
+-
+fstream
 -
 
 /home/wy/CLionProjects/FS/src/disk_op/inode_block.cpp

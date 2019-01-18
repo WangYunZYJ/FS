@@ -15,6 +15,8 @@ map
 -
 include/constant/constants.h
 -
+include/inode/inode.h
+-
 
 ..//include/cache/corlor_cout.h
 
@@ -43,6 +45,8 @@ vector
 -
 include/disk_op/data_structs.h
 -
+include/cache/commands.h
+-
 
 ..//include/inode/inode.h
 time.h
@@ -52,6 +56,12 @@ string
 tiff.h
 -
 include/constant/constants.h
+-
+
+..//include/io/io.h
+memory
+-
+fstream
 -
 
 /home/wy/CLionProjects/FS/src/cache/commands.cpp
@@ -68,5 +78,31 @@ iomanip
 cstring
 -
 fstream
+-
+
+/home/wy/CLionProjects/FS/src/disk_op/volume.cpp
+include/disk_op/volume.h
+-
+include/constant/constants.h
+-
+fstream
+-
+cstring
+-
+include/io/io.h
+-
+iostream
+-
+cassert
+-
+cmath
+-
+ctime
+-
+include/cache/commands.h
+-
+include/cache/corlor_cout.h
+-
+iomanip
 -
 

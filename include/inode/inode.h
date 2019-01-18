@@ -15,7 +15,8 @@ namespace wyfs
     enum FileMode
     {
         NORMAL_FILE,
-        MENU_FILE
+        MENU_FILE,
+        LINK_FILE
     };
 
     struct FilePermision
@@ -30,14 +31,14 @@ namespace wyfs
     {
         uint32 file_mode;
         FilePermision file_permision;
-        char owner[14];
+        char owner[NAME_SIZE];
         time_t timestamp;
         uint32 file_size;
         uint32 dirct_block[INODE_DIRECT_BLOCK_COUNT];
         uint32 first_block;
         uint32 second_block;
         uint32 block_count;
-        uint32 group;
+        char group[NAME_SIZE];
         uint32 inode_id;
         void print_test();
     };
