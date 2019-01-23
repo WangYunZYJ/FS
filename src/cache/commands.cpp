@@ -252,7 +252,8 @@ void wyfs::ls() {
                     cblue << endl;
             }
         }
-        cout << endl;
+        if(sons.size())
+            cout << endl;
         curr_file_each_line = 0;
     };
 
@@ -269,7 +270,7 @@ void wyfs::ls() {
         }
         else if(sub_command == "-l") {
             auto _volume = volume::get_instance();
-            _volume->print_inode_msg(curr_path[curr_path.size() - 1]);
+            _volume->print_inode_msg(curr_path);
         }
         else {
             cwhite << "ls: 无效选项 -- " << sub_command.substr(1) << endl;
@@ -300,7 +301,7 @@ void wyfs::passwd() {
         name2pwd[username] = password;
         auto _volume = volume::get_instance();
         _volume->update_user_pwd(username, password);
-    }else{
+    }else {
         cred << "用户" << username << "的口令错误，请重新尝试\n";
         return;
     }
@@ -353,7 +354,7 @@ void wyfs::mv() {
     }else {
         _volume->update_tree_lists(fatherPathVec.back(), srcPathVec.back());
         update_cache(file_name, srcPathVec.back());
-        _volume->release_dir_or_file(srcPathVec.back(), srcPathVec[srcPathVec.size() - 2]);
+        _volume->update_treelist_for_mv(srcPathVec.back(), srcPathVec[srcPathVec.size() - 2]);
         file_name2id.erase(get_full_name(srcPathVec));
     }
 }
@@ -373,7 +374,7 @@ void wyfs::cp() {
     uint32 file_inode_addr = _volume->create_file(const_cast<char*>((file_id2name[srcVec[srcVec.size() - 1]]+"_cpy").c_str()), owner, group);
     _volume->update_tree_lists(destVec[destVec.size() - 1], file_inode_addr);
     _volume->echo_msg_to_file(file_inode_addr, _volume->get_msg(srcVec[srcVec.size() - 1]));
-    update_cache(const_cast<char*>((file_id2name[srcVec[srcVec.size() - 1]]+"_cpy").c_str()), file_inode_addr);
+    update_cache(get_full_name(const_cast<char*>((file_id2name[srcVec[srcVec.size() - 1]]+"_cpy").c_str()), destVec), file_inode_addr);
 
 }
 
@@ -389,7 +390,9 @@ void wyfs::echo() {
             return;
         }
         if(op == ">" && pathVec.size()) {
+            //releas
             auto _volume = volume::get_instance();
+            _volume->release_blocks(pathVec.back(), curr_path.back());
             _volume->echo_msg_to_file(pathVec.back(), msg);
         }else {
             cwhite << "echo: 没有参数\'" << op << "\'\n";
@@ -509,7 +512,7 @@ void wyfs::chgrp() {
         return;
     }
     auto _volume = volume::get_instance();
-    _volume->chown(pathVec.back(), grp);
+    _volume->chgrp(pathVec.back(), grp);
 }
 
 void wyfs::ln() {
@@ -578,4 +581,23 @@ void wyfs::firstUseradd() {
 
         strcpy(owner, username);
         strcpy(group, username);
+}
+
+void wyfs::superblock() {
+    auto _volume = volume::get_instance();
+    _volume->superblock_print_test();
+    _volume->print_inode();
+}
+
+void wyfs::create_file(uint32 blk_count) {
+    ofstream file(FILE_MSG_PATH);
+    for(size_t i = 0; i < BLOCK_SIZE * blk_count; ++i) {
+        file << 'u';
+    }
+}
+
+void wyfs::file() {
+    uint32 count;
+    cin >> count;
+    create_file(count);
 }

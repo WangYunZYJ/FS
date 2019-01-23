@@ -40,7 +40,8 @@ namespace wyfs
         uint32 block_count;
         char group[NAME_SIZE];
         uint32 inode_id;
-        void print_test();
+        uint32 link_count;
+//        void print_test();
     };
 }
 

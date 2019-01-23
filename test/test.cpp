@@ -10,7 +10,7 @@ int main()
 {
     auto _volume = wyfs::volume::get_instance();
 
-    _volume->disk_init();
+//aa    _volume->disk_init();
 
     _volume->init_cache();
     wyfs::login();
@@ -57,6 +57,10 @@ int main()
             wyfs::unmask();
         else if(command == "ln")
             wyfs::ln();
+        else if(command == "superblock")
+            wyfs::superblock();
+        else if(command == "file")
+            wyfs::file();
         else
             cout << command <<": 未找到命令\n";
         wyfs::print_curr_path();

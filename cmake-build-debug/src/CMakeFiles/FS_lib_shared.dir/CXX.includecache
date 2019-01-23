@@ -105,4 +105,16 @@ include/cache/corlor_cout.h
 -
 iomanip
 -
+set
+-
+
+/home/wy/CLionProjects/FS/src/inode/inode.cpp
+include/inode/inode.h
+-
+iostream
+-
+time.h
+-
+cstdio
+-
 

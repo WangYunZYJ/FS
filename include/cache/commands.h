@@ -36,6 +36,7 @@ namespace wyfs{
 
     std::string get_father_path(std::string path);
 
+    void create_file(uint32 blk_count);
 
     void print_curr_path();
 
@@ -78,6 +79,10 @@ namespace wyfs{
     void login();
 
     void fill();
+
+    void superblock();
+
+    void file();
 }
 
 #endif //FS_COMMANDS_H
