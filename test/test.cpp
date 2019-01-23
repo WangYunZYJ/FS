@@ -10,7 +10,7 @@ int main()
 {
     auto _volume = wyfs::volume::get_instance();
 
-//aa    _volume->disk_init();
+    _volume->disk_init();
 
     _volume->init_cache();
     wyfs::login();

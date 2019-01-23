@@ -392,7 +392,7 @@ void wyfs::echo() {
         if(op == ">" && pathVec.size()) {
             //releas
             auto _volume = volume::get_instance();
-            _volume->release_blocks(pathVec.back(), curr_path.back());
+            //_volume->release_blocks(pathVec.back(), curr_path.back());
             _volume->echo_msg_to_file(pathVec.back(), msg);
         }else {
             cwhite << "echo: 没有参数\'" << op << "\'\n";
